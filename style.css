@@ -592,7 +592,7 @@ section#projects, section#news, section#contact, section#about {
 
 .project-item {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 2.5rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -1666,12 +1666,7 @@ footer {
   white-space: normal;
   word-break: break-word;
 }
-.prod-tile-body p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+
 
 /* Responsive overlay */
 @media (max-width: 900px) {
@@ -1756,5 +1751,51 @@ footer {
   letter-spacing: -0.02em;
 }
 
-/* Remove duplicate about-num CSS if any */
-.about-numbers { display: none; }
+
+/* ── RESTORED: About numbers ── */
+.about-numbers {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.about-num span {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--amber);
+  display: block;
+  line-height: 1;
+}
+.about-num span sup { font-size: 1rem; }
+.about-num label {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--steel);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── FIX: Project items - no date column ── */
+.project-item {
+  grid-template-columns: 1fr !important;
+  gap: 0.8rem;
+}
+.project-item.featured-project {
+  grid-template-columns: 1fr !important;
+}
+
+/* ── FIX: Prod tile text - no clipping cutoff ── */
+.prod-tile-body > p {
+  display: block !important;
+  -webkit-line-clamp: unset !important;
+  overflow: visible !important;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--white-dim);
+  margin: 0 0 0.6rem;
+}
