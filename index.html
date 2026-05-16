@@ -40,16 +40,22 @@
     <div class="hero-badge">
       <span class="mono">IIT Kanpur · FEP Incubated</span>
     </div>
+    <p class="hero-mission">
+      Cyber-Physical Platform for Industry 4.0 Implementation
+    </p>
+    <div class="hero-pillars">
+      <span>Digital Twins</span>
+      <span class="pill-div">·</span>
+      <span>Real-Time Monitoring</span>
+      <span class="pill-div">·</span>
+      <span>AI / ML Analytics</span>
+      <span class="pill-div">·</span>
+      <span>Process Intelligence</span>
+    </div>
     <h1 class="hero-title">
-      <span class="line1">INDIGENOUS.</span>
       <span class="line2">MODULAR.</span>
       <span class="line3">SCALABLE.</span>
     </h1>
-    <p class="hero-sub">
-      Cyber-Physical Platform for Industry 4.0 implementation —<br />
-      Digital Twins, Real-Time Monitoring, AI/ML Analytics,<br />
-      and Process Intelligence for Indian manufacturing.
-    </p>
     <div class="hero-actions">
       <a href="#products" class="btn-primary">Explore Products</a>
       <a href="#projects" class="btn-ghost">Our Projects</a>
@@ -78,89 +84,302 @@
     <p class="section-sub">End-to-end cyber-physical solutions — from sensor to cloud, from machine to decision.</p>
   </div>
 
-  <div class="products-grid">
-
-    <div class="product-card featured" data-product="maintellix">
+  <!-- MaintelliGenX — full-width featured -->
+  <div class="product-card-hero">
+    <div class="pch-content">
       <div class="card-accent"></div>
-      <div class="card-icon">⬡</div>
+      <p class="card-tag mono">Flagship Platform</p>
       <h3>MaintelliGenX</h3>
-      <p class="card-tag mono">Integrated Digital Twin Platform</p>
-      <p>Unified orchestration layer integrating RotorTwinX, PowerPlantTwin, and process modules into a single intelligent maintenance and operations platform. Physics-informed, data-driven, and cloud-ready.</p>
+      <p class="pch-sub">Unified orchestration layer — integrating RotorTwinX, AeroEngineTwinX, PowerPlantTwin, and RailTwin into a single physics-informed, data-driven operations intelligence platform. One dashboard. Every asset. Every domain.</p>
+      <div class="pch-modules">
+        <span>RotorTwinX</span>
+        <span>AeroEngineTwinX</span>
+        <span>PowerPlantTwin</span>
+        <span>RailTwin</span>
+        <span>ProcessScheduler</span>
+      </div>
       <ul class="card-features">
-        <li>Multi-domain twin integration</li>
-        <li>Health Index (HI) tracking</li>
-        <li>Predictive maintenance engine</li>
-        <li>NASA C-MAPSS validated</li>
+        <li>Domain-selector landing: choose asset class, load its full twin module</li>
+        <li>Shared Health Index (HI) engine — monotonically decreasing, physics-grounded</li>
+        <li>Unified DOCX/PDF report generation across all modules</li>
+        <li>Validated on NASA C-MAPSS (709 engines · 159,359 cycles)</li>
+        <li>Streamlit · PyTorch · SimPy · Cloud VPS architecture</li>
       </ul>
     </div>
+    <div class="pch-visual">
+      <!-- Architecture diagram SVG -->
+      <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+        <defs>
+          <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#e8a020" opacity="0.7"/>
+          </marker>
+        </defs>
+        <!-- Central hub -->
+        <rect x="110" y="110" width="120" height="60" rx="6" fill="#1c2640" stroke="#e8a020" stroke-width="1.5"/>
+        <text x="170" y="136" text-anchor="middle" fill="#e8a020" font-size="11" font-family="'JetBrains Mono',monospace" font-weight="600">MaintelliGenX</text>
+        <text x="170" y="152" text-anchor="middle" fill="#8fa0b8" font-size="8.5" font-family="'JetBrains Mono',monospace">Orchestration Layer</text>
+        <!-- Modules -->
+        <rect x="10" y="20" width="90" height="38" rx="4" fill="#151d2e" stroke="#4a5a70" stroke-width="1"/>
+        <text x="55" y="37" text-anchor="middle" fill="#e8ecf2" font-size="9" font-family="'Barlow Condensed',sans-serif" font-weight="700">RotorTwinX</text>
+        <text x="55" y="50" text-anchor="middle" fill="#8fa0b8" font-size="7.5" font-family="'JetBrains Mono',monospace">VibLab CNN · STFT</text>
+        <line x1="100" y1="39" x2="110" y2="120" stroke="#e8a020" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5" marker-end="url(#arr)"/>
+
+        <rect x="240" y="20" width="90" height="38" rx="4" fill="#151d2e" stroke="#4a5a70" stroke-width="1"/>
+        <text x="285" y="37" text-anchor="middle" fill="#e8ecf2" font-size="9" font-family="'Barlow Condensed',sans-serif" font-weight="700">AeroEngineTwinX</text>
+        <text x="285" y="50" text-anchor="middle" fill="#8fa0b8" font-size="7.5" font-family="'JetBrains Mono',monospace">C-MAPSS · Physics HI</text>
+        <line x1="240" y1="39" x2="230" y2="120" stroke="#e8a020" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5" marker-end="url(#arr)"/>
+
+        <rect x="10" y="220" width="90" height="38" rx="4" fill="#151d2e" stroke="#4a5a70" stroke-width="1"/>
+        <text x="55" y="237" text-anchor="middle" fill="#e8ecf2" font-size="9" font-family="'Barlow Condensed',sans-serif" font-weight="700">PowerPlantTwin</text>
+        <text x="55" y="250" text-anchor="middle" fill="#8fa0b8" font-size="7.5" font-family="'JetBrains Mono',monospace">FFT · HI Tracking</text>
+        <line x1="100" y1="239" x2="110" y2="170" stroke="#e8a020" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5" marker-end="url(#arr)"/>
+
+        <rect x="240" y="220" width="90" height="38" rx="4" fill="#151d2e" stroke="#4a5a70" stroke-width="1"/>
+        <text x="285" y="237" text-anchor="middle" fill="#e8ecf2" font-size="9" font-family="'Barlow Condensed',sans-serif" font-weight="700">RailTwin</text>
+        <text x="285" y="250" text-anchor="middle" fill="#8fa0b8" font-size="7.5" font-family="'JetBrains Mono',monospace">WILD · Digital Twin</text>
+        <line x1="240" y1="239" x2="230" y2="170" stroke="#e8a020" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5" marker-end="url(#arr)"/>
+
+        <!-- Output -->
+        <rect x="120" y="210" width="100" height="30" rx="4" fill="#0a0e17" stroke="#2eb8e0" stroke-width="1"/>
+        <text x="170" y="229" text-anchor="middle" fill="#2eb8e0" font-size="8.5" font-family="'JetBrains Mono',monospace">Cloud Dashboard</text>
+        <line x1="170" y1="170" x2="170" y2="210" stroke="#2eb8e0" stroke-width="0.8" opacity="0.6" marker-end="url(#arr)"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="products-grid">
 
     <div class="product-card" data-product="rotortwin">
       <div class="card-accent"></div>
-      <div class="card-icon">⟳</div>
+      <div class="card-vis">
+        <!-- Vibration waveform + CNN schematic -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">STFT Spectrogram</text>
+          <!-- Faux spectrogram blocks -->
+          <g opacity="0.85">
+            <rect x="4" y="18" width="6" height="10" fill="#1c3a5e"/><rect x="4" y="28" width="6" height="8" fill="#2a5a8a"/><rect x="4" y="36" width="6" height="6" fill="#1c3a5e"/>
+            <rect x="11" y="18" width="6" height="14" fill="#e8a020" opacity="0.7"/><rect x="11" y="32" width="6" height="6" fill="#2a5a8a"/><rect x="11" y="38" width="6" height="4" fill="#1c3a5e"/>
+            <rect x="18" y="18" width="6" height="8" fill="#2a5a8a"/><rect x="18" y="26" width="6" height="18" fill="#e8a020" opacity="0.5"/><rect x="18" y="44" width="6" height="4" fill="#1c3a5e"/>
+            <rect x="25" y="18" width="6" height="6" fill="#1c3a5e"/><rect x="25" y="24" width="6" height="22" fill="#e84040" opacity="0.6"/><rect x="25" y="46" width="6" height="2" fill="#1c3a5e"/>
+            <rect x="32" y="18" width="6" height="10" fill="#2a5a8a"/><rect x="32" y="28" width="6" height="14" fill="#e8a020" opacity="0.6"/><rect x="32" y="42" width="6" height="6" fill="#1c3a5e"/>
+            <rect x="39" y="18" width="6" height="8" fill="#1c3a5e"/><rect x="39" y="26" width="6" height="10" fill="#2a5a8a"/><rect x="39" y="36" width="6" height="12" fill="#e8a020" opacity="0.4"/>
+            <rect x="46" y="18" width="6" height="12" fill="#2a5a8a"/><rect x="46" y="30" width="6" height="8" fill="#1c3a5e"/><rect x="46" y="38" width="6" height="10" fill="#2eb8e0" opacity="0.4"/>
+          </g>
+          <!-- Arrow -->
+          <text x="60" y="38" fill="#4a5a70" font-size="14">→</text>
+          <!-- CNN layers schematic -->
+          <rect x="76" y="20" width="8" height="40" rx="2" fill="#1c3a5e" stroke="#2a5a8a" stroke-width="0.5"/>
+          <rect x="87" y="24" width="8" height="32" rx="2" fill="#1c3a5e" stroke="#2a5a8a" stroke-width="0.5"/>
+          <rect x="98" y="28" width="8" height="24" rx="2" fill="#1c3a5e" stroke="#2a5a8a" stroke-width="0.5"/>
+          <text x="78" y="68" fill="#8fa0b8" font-size="6" font-family="'JetBrains Mono',monospace">Conv layers</text>
+          <!-- Arrow -->
+          <text x="110" y="38" fill="#4a5a70" font-size="14">→</text>
+          <!-- t-SNE clusters -->
+          <circle cx="135" cy="30" r="4" fill="#e8a020" opacity="0.7"/>
+          <circle cx="143" cy="26" r="3" fill="#e8a020" opacity="0.5"/>
+          <circle cx="139" cy="36" r="3.5" fill="#e8a020" opacity="0.6"/>
+          <circle cx="155" cy="40" r="4" fill="#2eb8e0" opacity="0.7"/>
+          <circle cx="163" cy="44" r="3" fill="#2eb8e0" opacity="0.5"/>
+          <circle cx="158" cy="32" r="3" fill="#e84040" opacity="0.6"/>
+          <circle cx="148" cy="50" r="4" fill="#2a8a5a" opacity="0.7"/>
+          <circle cx="140" cy="55" r="3" fill="#2a8a5a" opacity="0.5"/>
+          <text x="130" y="68" fill="#8fa0b8" font-size="6" font-family="'JetBrains Mono',monospace">t-SNE clusters</text>
+        </svg>
+      </div>
       <h3>RotorTwinX</h3>
-      <p class="card-tag mono">Rotating Machinery Diagnostics</p>
-      <p>Digital twin for rotating machinery fault classification using vibration signal processing. CNN on spectrograms, t-SNE visualisation, BPFO/BPFI bearing diagnostics.</p>
+      <p class="card-tag mono">Rotating Machinery · VibLab IIT Kanpur</p>
+      <p>Digital twin for rotor-bearing fault classification. Raw vibration signals → STFT spectrograms → VibLab CNN v2 (custom architecture from IIT Kanpur) → t-SNE cluster visualisation → Health Index. Detects Unbalance, Crack, BPFO, BPFI with 93–100% accuracy.</p>
       <ul class="card-features">
-        <li>STFT / wavelet signal processing</li>
-        <li>ANN · LSTM · CNN architectures</li>
-        <li>93–100% fault detection accuracy</li>
-        <li>Multi-sensor fusion</li>
+        <li>STFT · wavelet signal processing pipeline</li>
+        <li>VibLab IIT Kanpur CNN v2 · LSTM · ResNet</li>
+        <li>t-SNE dimensionality visualisation</li>
+        <li>93–100% accuracy on 5-class rotor dataset</li>
+        <li>Automated DOCX/PDF diagnostic report</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="aerotwin">
+      <div class="card-accent"></div>
+      <div class="card-vis">
+        <!-- Turbofan health index decay curve -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">Health Index Trajectory</text>
+          <!-- Axes -->
+          <line x1="14" y1="16" x2="14" y2="65" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="14" y1="65" x2="185" y2="65" stroke="#4a5a70" stroke-width="0.8"/>
+          <text x="4" y="20" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">HI</text>
+          <text x="180" y="72" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">t</text>
+          <!-- HI decay curve -->
+          <polyline points="14,20 40,22 65,27 90,35 115,44 135,52 155,59 175,64" fill="none" stroke="#2eb8e0" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Threshold line -->
+          <line x1="14" y1="56" x2="185" y2="56" stroke="#e84040" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.7"/>
+          <text x="148" y="54" fill="#e84040" font-size="6" font-family="'JetBrains Mono',monospace">threshold</text>
+          <!-- Component labels -->
+          <text x="18" y="28" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">Fan</text>
+          <polyline points="70,30 80,32 95,38 110,46" fill="none" stroke="#e8a020" stroke-width="1" stroke-dasharray="2,1.5" opacity="0.6"/>
+          <text x="72" y="28" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace" opacity="0.8">HPC</text>
+          <!-- C-MAPSS label -->
+          <text x="14" y="77" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">C-MAPSS · 709 engines · 159,359 cycles</text>
+        </svg>
+      </div>
+      <h3>AeroEngineTwinX</h3>
+      <p class="card-tag mono">Turbofan Engine Prognostics</p>
+      <p>Physics-informed digital twin for gas turbine engine health management. Thermodynamic cycle reconstruction from partial sensor data yields component-resolved Health Index without run-to-failure labels. Validated on the NASA C-MAPSS benchmark across all four sub-datasets.</p>
+      <ul class="card-features">
+        <li>4-step physics-informed HI pipeline</li>
+        <li>T-s / P-v thermodynamic cycle reconstruction</li>
+        <li>87% component diagnosis accuracy (single-fault)</li>
+        <li>Fleet-wide monitoring dashboard</li>
+        <li>No run-to-failure labels required</li>
       </ul>
     </div>
 
     <div class="product-card" data-product="powerplant">
       <div class="card-accent"></div>
-      <div class="card-icon">⚡</div>
+      <div class="card-vis">
+        <!-- FFT spectrum -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">FFT Vibration Spectrum</text>
+          <line x1="14" y1="65" x2="185" y2="65" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="14" y1="16" x2="14" y2="65" stroke="#4a5a70" stroke-width="0.8"/>
+          <text x="4" y="20" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">|X|</text>
+          <text x="180" y="72" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">Hz</text>
+          <!-- Spectral lines -->
+          <line x1="35" y1="65" x2="35" y2="22" stroke="#2eb8e0" stroke-width="2" opacity="0.9"/>
+          <line x1="55" y1="65" x2="55" y2="44" stroke="#2eb8e0" stroke-width="1.5" opacity="0.7"/>
+          <line x1="70" y1="65" x2="70" y2="52" stroke="#2eb8e0" stroke-width="1.2" opacity="0.6"/>
+          <line x1="90" y1="65" x2="90" y2="30" stroke="#e8a020" stroke-width="2" opacity="0.85"/>
+          <line x1="110" y1="65" x2="110" y2="50" stroke="#2eb8e0" stroke-width="1.2" opacity="0.6"/>
+          <line x1="130" y1="65" x2="130" y2="40" stroke="#e84040" stroke-width="2" opacity="0.8"/>
+          <line x1="150" y1="65" x2="150" y2="55" stroke="#2eb8e0" stroke-width="1" opacity="0.5"/>
+          <line x1="170" y1="65" x2="170" y2="48" stroke="#2eb8e0" stroke-width="1.2" opacity="0.6"/>
+          <text x="28" y="19" fill="#2eb8e0" font-size="5.5" font-family="'JetBrains Mono',monospace">1×</text>
+          <text x="83" y="27" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">2×</text>
+          <text x="123" y="37" fill="#e84040" font-size="5.5" font-family="'JetBrains Mono',monospace">fault</text>
+          <text x="14" y="77" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">PoP Monitor → Python analytics pipeline</text>
+        </svg>
+      </div>
       <h3>PowerPlantTwin</h3>
-      <p class="card-tag mono">Power Plant Monitoring</p>
-      <p>Condition monitoring for power generation assets. Converts legacy PoP Monitor data to Python-based analytics pipeline with FFT, health indexing, and anomaly detection.</p>
+      <p class="card-tag mono">Power Generation Asset Monitoring</p>
+      <p>Condition monitoring digital twin for power generation assets — turbines, generators, auxiliary machinery. Translates legacy LabVIEW PoP Monitor acquisitions into a Python-based analytics pipeline with FFT spectral analysis, harmonic identification, Health Index tracking, and anomaly detection.</p>
       <ul class="card-features">
-        <li>Signal & vibration monitoring</li>
-        <li>FFT-based diagnostics</li>
-        <li>HI tracking over time</li>
-        <li>Legacy system integration</li>
+        <li>LabVIEW → Python migration pathway</li>
+        <li>FFT · harmonic analysis · 1×, 2× tracking</li>
+        <li>Fault-frequency identification (bearing, shaft)</li>
+        <li>Health Index trending over operational life</li>
+        <li>Shares RotorTwinX vibration engine</li>
       </ul>
     </div>
 
     <div class="product-card" data-product="rtmon">
       <div class="card-accent"></div>
-      <div class="card-icon">◈</div>
+      <div class="card-vis">
+        <!-- Shopfloor topology -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">Shopfloor IoT Network</text>
+          <!-- Machines -->
+          <rect x="10" y="22" width="28" height="18" rx="2" fill="#151d2e" stroke="#2a5a8a" stroke-width="1"/>
+          <text x="24" y="34" text-anchor="middle" fill="#8fa0b8" font-size="6" font-family="'JetBrains Mono',monospace">CNC</text>
+          <rect x="50" y="22" width="28" height="18" rx="2" fill="#151d2e" stroke="#2a5a8a" stroke-width="1"/>
+          <text x="64" y="34" text-anchor="middle" fill="#8fa0b8" font-size="6" font-family="'JetBrains Mono',monospace">Robot</text>
+          <rect x="90" y="22" width="28" height="18" rx="2" fill="#151d2e" stroke="#e8a020" stroke-width="1"/>
+          <text x="104" y="34" text-anchor="middle" fill="#e8a020" font-size="6" font-family="'JetBrains Mono',monospace">RFID</text>
+          <!-- Network lines -->
+          <line x1="24" y1="40" x2="24" y2="52" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="64" y1="40" x2="64" y2="52" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="104" y1="40" x2="104" y2="52" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="24" y1="52" x2="104" y2="52" stroke="#4a5a70" stroke-width="0.8"/>
+          <line x1="64" y1="52" x2="64" y2="60" stroke="#4a5a70" stroke-width="0.8"/>
+          <!-- Gateway -->
+          <rect x="44" y="60" width="40" height="14" rx="2" fill="#1c2640" stroke="#2eb8e0" stroke-width="1"/>
+          <text x="64" y="70" text-anchor="middle" fill="#2eb8e0" font-size="6" font-family="'JetBrains Mono',monospace">Gateway</text>
+          <!-- Cloud -->
+          <rect x="140" y="30" width="50" height="20" rx="4" fill="#0a0e17" stroke="#2eb8e0" stroke-width="1"/>
+          <text x="165" y="43" text-anchor="middle" fill="#2eb8e0" font-size="6" font-family="'JetBrains Mono',monospace">Cloud VPS</text>
+          <line x1="84" y1="67" x2="140" y2="40" stroke="#2eb8e0" stroke-width="0.8" stroke-dasharray="2,1.5" opacity="0.6"/>
+          <text x="140" y="62" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">MCF Raebareli</text>
+        </svg>
+      </div>
       <h3>Real-Time Monitoring</h3>
-      <p class="card-tag mono">DAQ-Display Dashboard</p>
-      <p>Shopfloor data acquisition, homogenisation and visualisation from heterogeneous CNC machines, welding robots, and manual work centres. Web-app integrated.</p>
+      <p class="card-tag mono">DAQ · Dashboard · HMI</p>
+      <p>Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. RFID-based material tracking and HMI integration, deployed and validated at MCF Raebareli. Remote access via cloud VPS.</p>
       <ul class="card-features">
-        <li>CNC / Robot / Manual machines</li>
-        <li>RFID material tracking</li>
-        <li>HMI integration</li>
-        <li>Cloud data relay (VPS)</li>
+        <li>Multi-machine DAQ homogenisation</li>
+        <li>RFID material & WIP tracking</li>
+        <li>Live web dashboard + historical analytics</li>
+        <li>Utilisation, cycle time, OEE metrics</li>
+        <li>Cloud VPS relay for remote monitoring</li>
       </ul>
     </div>
 
     <div class="product-card" data-product="sched">
       <div class="card-accent"></div>
-      <div class="card-icon">▦</div>
+      <div class="card-vis">
+        <!-- Gantt chart schematic -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">Gantt · Priority Dispatch</text>
+          <!-- Gantt bars -->
+          <text x="4" y="26" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">M1</text>
+          <rect x="18" y="19" width="60" height="9" rx="1" fill="#e8a020" opacity="0.75"/>
+          <rect x="80" y="19" width="40" height="9" rx="1" fill="#2eb8e0" opacity="0.6"/>
+          <text x="4" y="38" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">M2</text>
+          <rect x="18" y="31" width="30" height="9" rx="1" fill="#2eb8e0" opacity="0.6"/>
+          <rect x="50" y="31" width="50" height="9" rx="1" fill="#e8a020" opacity="0.6"/>
+          <rect x="102" y="31" width="35" height="9" rx="1" fill="#2a8a5a" opacity="0.6"/>
+          <text x="4" y="50" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">M3</text>
+          <rect x="18" y="43" width="45" height="9" rx="1" fill="#2a8a5a" opacity="0.6"/>
+          <rect x="65" y="43" width="55" height="9" rx="1" fill="#e84040" opacity="0.5"/>
+          <text x="4" y="62" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">M4</text>
+          <rect x="18" y="55" width="25" height="9" rx="1" fill="#e84040" opacity="0.5"/>
+          <rect x="45" y="55" width="60" height="9" rx="1" fill="#e8a020" opacity="0.5"/>
+          <!-- Bottleneck marker -->
+          <line x1="120" y1="16" x2="120" y2="66" stroke="#e84040" stroke-width="0.8" stroke-dasharray="2,1.5" opacity="0.6"/>
+          <text x="122" y="22" fill="#e84040" font-size="5.5" font-family="'JetBrains Mono',monospace">bottleneck</text>
+          <text x="18" y="77" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">SimPy discrete-event · MCF Shell Shop</text>
+        </svg>
+      </div>
       <h3>Process Scheduling</h3>
-      <p class="card-tag mono">Shop Floor Digital Twin</p>
-      <p>Discrete-event simulation-based production scheduling with priority dispatching, Gantt chart generation, and machine utilisation analytics. Proven at MCF Raebareli.</p>
+      <p class="card-tag mono">Shopfloor Digital Twin · SimPy Engine</p>
+      <p>Discrete-event simulation of the production shopfloor — each machine and component modelled as Python objects. Priority-based dispatching, automated Gantt chart generation, and bottleneck identification. Deployed at MCF Raebareli Shell Shop; reduced lead time for priority coaches by up to 10 days.</p>
       <ul class="card-features">
-        <li>SimPy discrete-event engine</li>
-        <li>Priority-based dispatching</li>
-        <li>Gantt + utilisation charts</li>
+        <li>SimPy discrete-event at 1-minute resolution</li>
+        <li>Priority-based job dispatching rules</li>
+        <li>Gantt + machine utilisation analytics</li>
+        <li>Bottleneck detection (86–88% utilisation)</li>
         <li>ERP integration flexibility</li>
       </ul>
     </div>
 
     <div class="product-card" data-product="otit">
       <div class="card-accent"></div>
-      <div class="card-icon">⇄</div>
+      <div class="card-vis">
+        <!-- OT-IT stack -->
+        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="12" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace" opacity="0.7">OT – IT Integration Stack</text>
+          <rect x="8" y="18" width="80" height="13" rx="2" fill="#0a0e17" stroke="#2eb8e0" stroke-width="1"/>
+          <text x="48" y="28" text-anchor="middle" fill="#2eb8e0" font-size="7" font-family="'JetBrains Mono',monospace">IT · Analytics · Cloud</text>
+          <rect x="8" y="34" width="80" height="13" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="1"/>
+          <text x="48" y="44" text-anchor="middle" fill="#8fa0b8" font-size="7" font-family="'JetBrains Mono',monospace">OT–IT Bridge Layer</text>
+          <rect x="8" y="50" width="80" height="13" rx="2" fill="#1c2640" stroke="#e8a020" stroke-width="1"/>
+          <text x="48" y="60" text-anchor="middle" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace">OT · Controllers · HMI</text>
+          <!-- Protocols -->
+          <text x="100" y="20" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">Modbus</text>
+          <text x="100" y="30" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">OPC-UA</text>
+          <text x="100" y="40" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">MQTT</text>
+          <text x="100" y="50" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">RFID</text>
+          <text x="100" y="60" fill="#4a5a70" font-size="6" font-family="'JetBrains Mono',monospace">RS-232/485</text>
+          <text x="8" y="77" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">Secure · Indigenous · Scalable</text>
+        </svg>
+      </div>
       <h3>OT–IT Bridge</h3>
-      <p class="card-tag mono">Operational–Information Technology</p>
-      <p>Platform bridging Operational Technology and Information Technology — from industrial controllers and embedded systems to enterprise analytics. Ubiquitous, secure integration.</p>
+      <p class="card-tag mono">Operational · Information Technology</p>
+      <p>Platform bridging the physical shopfloor (Operational Technology — PLCs, CNCs, embedded systems, RFID, cameras) with enterprise analytics (Information Technology). Indigenous design ensures secure data ownership, with no dependence on proprietary vendor ecosystems.</p>
       <ul class="card-features">
-        <li>Industrial controllers & networks</li>
-        <li>Embedded systems support</li>
-        <li>Cameras, scanners, RFID</li>
-        <li>Secure data ownership</li>
+        <li>Industrial controllers · embedded systems</li>
+        <li>Modbus · OPC-UA · MQTT · RS-232/485</li>
+        <li>Camera & scanner integration</li>
+        <li>Secure, indigenous data ownership</li>
+        <li>Scalable from single machine to factory</li>
       </ul>
     </div>
 
