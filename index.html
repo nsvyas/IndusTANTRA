@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IndusTANTRA Pvt. Ltd. — Industry 4.0 | Digital Twins | IIT Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;900&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="#home" class="nav-brand">
+    <span class="brand-indus">Indus</span><span class="brand-tantra">TANTRA</span>
+    <span class="brand-sub">Pvt. Ltd.</span>
+  </a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="home">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="mono">IIT Kanpur · FEP Incubated</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line1">INDIGENOUS.</span>
+      <span class="line2">MODULAR.</span>
+      <span class="line3">SCALABLE.</span>
+    </h1>
+    <p class="hero-sub">
+      Cyber-Physical Platform for Industry 4.0 implementation —<br />
+      Digital Twins, Real-Time Monitoring, AI/ML Analytics,<br />
+      and Process Intelligence for Indian manufacturing.
+    </p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="#projects" class="btn-ghost">Our Projects</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">38<sup>+</sup></span><span class="stat-label">Years Research</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label">Platform Modules</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">15<sup>+</sup></span><span class="stat-label">Major Projects</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">100<sup>+</sup></span><span class="stat-label">Publications</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span class="mono">scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section id="products">
+  <div class="section-header">
+    <span class="section-tag mono">// 01 · PRODUCTS</span>
+    <h2>Platform Modules</h2>
+    <p class="section-sub">End-to-end cyber-physical solutions — from sensor to cloud, from machine to decision.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product-card featured" data-product="maintellix">
+      <div class="card-accent"></div>
+      <div class="card-icon">⬡</div>
+      <h3>MaintelliGenX</h3>
+      <p class="card-tag mono">Integrated Digital Twin Platform</p>
+      <p>Unified orchestration layer integrating RotorTwinX, PowerPlantTwin, and process modules into a single intelligent maintenance and operations platform. Physics-informed, data-driven, and cloud-ready.</p>
+      <ul class="card-features">
+        <li>Multi-domain twin integration</li>
+        <li>Health Index (HI) tracking</li>
+        <li>Predictive maintenance engine</li>
+        <li>NASA C-MAPSS validated</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="rotortwin">
+      <div class="card-accent"></div>
+      <div class="card-icon">⟳</div>
+      <h3>RotorTwinX</h3>
+      <p class="card-tag mono">Rotating Machinery Diagnostics</p>
+      <p>Digital twin for rotating machinery fault classification using vibration signal processing. CNN on spectrograms, t-SNE visualisation, BPFO/BPFI bearing diagnostics.</p>
+      <ul class="card-features">
+        <li>STFT / wavelet signal processing</li>
+        <li>ANN · LSTM · CNN architectures</li>
+        <li>93–100% fault detection accuracy</li>
+        <li>Multi-sensor fusion</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="powerplant">
+      <div class="card-accent"></div>
+      <div class="card-icon">⚡</div>
+      <h3>PowerPlantTwin</h3>
+      <p class="card-tag mono">Power Plant Monitoring</p>
+      <p>Condition monitoring for power generation assets. Converts legacy PoP Monitor data to Python-based analytics pipeline with FFT, health indexing, and anomaly detection.</p>
+      <ul class="card-features">
+        <li>Signal & vibration monitoring</li>
+        <li>FFT-based diagnostics</li>
+        <li>HI tracking over time</li>
+        <li>Legacy system integration</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="rtmon">
+      <div class="card-accent"></div>
+      <div class="card-icon">◈</div>
+      <h3>Real-Time Monitoring</h3>
+      <p class="card-tag mono">DAQ-Display Dashboard</p>
+      <p>Shopfloor data acquisition, homogenisation and visualisation from heterogeneous CNC machines, welding robots, and manual work centres. Web-app integrated.</p>
+      <ul class="card-features">
+        <li>CNC / Robot / Manual machines</li>
+        <li>RFID material tracking</li>
+        <li>HMI integration</li>
+        <li>Cloud data relay (VPS)</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="sched">
+      <div class="card-accent"></div>
+      <div class="card-icon">▦</div>
+      <h3>Process Scheduling</h3>
+      <p class="card-tag mono">Shop Floor Digital Twin</p>
+      <p>Discrete-event simulation-based production scheduling with priority dispatching, Gantt chart generation, and machine utilisation analytics. Proven at MCF Raebareli.</p>
+      <ul class="card-features">
+        <li>SimPy discrete-event engine</li>
+        <li>Priority-based dispatching</li>
+        <li>Gantt + utilisation charts</li>
+        <li>ERP integration flexibility</li>
+      </ul>
+    </div>
+
+    <div class="product-card" data-product="otit">
+      <div class="card-accent"></div>
+      <div class="card-icon">⇄</div>
+      <h3>OT–IT Bridge</h3>
+      <p class="card-tag mono">Operational–Information Technology</p>
+      <p>Platform bridging Operational Technology and Information Technology — from industrial controllers and embedded systems to enterprise analytics. Ubiquitous, secure integration.</p>
+      <ul class="card-features">
+        <li>Industrial controllers & networks</li>
+        <li>Embedded systems support</li>
+        <li>Cameras, scanners, RFID</li>
+        <li>Secure data ownership</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="tech-domains">
+    <span class="section-tag mono">// TECHNOLOGY DOMAINS</span>
+    <div class="domains-strip">
+      <span>Component & System Dynamics</span>
+      <span>Manufacturing Process Optimisation</span>
+      <span>Sensors & Instrumentation</span>
+      <span>Imaging & Quality Assurance</span>
+      <span>Machine Learning · Deep Learning</span>
+      <span>Health Diagnosis & Prognosis</span>
+      <span>Rail–Wheel Contact Dynamics</span>
+      <span>Nonlinear Parameter Estimation</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-header">
+    <span class="section-tag mono">// 02 · PROJECTS</span>
+    <h2>Major Projects</h2>
+    <p class="section-sub">Flagship implementations and sponsored research across Indian industry and government.</p>
+  </div>
+
+  <div class="projects-list">
+
+    <div class="project-item featured-project">
+      <div class="proj-year mono">2019–present</div>
+      <div class="proj-body">
+        <span class="proj-tag">Industry 4.0 · Railways</span>
+        <h3>Technology Mission for Indian Railways (TMIR) — MCF Raebareli</h3>
+        <p>Pilot-scale implementation of an integrated Industry 4.0 platform at Modern Coach Factory (MCF), Raebareli — India's most modern coach manufacturing facility. Three interconnected pillars: shopfloor monitoring, production scheduling, and RFID-based material tracking. Priority-based scheduling reduced completion time for highest-priority coach variants by up to <strong>10 days</strong> vs random dispatching. Bottleneck analysis identified key stations at ~86–88% utilisation.</p>
+        <div class="proj-links">
+          <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1586545" target="_blank" class="proj-link">PIB Release</a>
+          <a href="https://www.ndtv.com/education/industry-4-0-railway-ministry-and-iit-kanpur-digital-project-to-host-ai-big-data-machine-learning-2108763" target="_blank" class="proj-link">NDTV</a>
+          <a href="https://cio.economictimes.indiatimes.com/news/strategy-and-management/industry-4-0-railways-to-integrate-big-data-ai/71369653" target="_blank" class="proj-link">Economic Times</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-item featured-project">
+      <div class="proj-year mono">2022–present</div>
+      <div class="proj-body">
+        <span class="proj-tag">Digital Twin · Railways</span>
+        <h3>Railway Digital Twin — Waltair Division, East Coast Railway</h3>
+        <p>Design and implementation of a five-layer open-source digital twinning framework for Indian Railways, developed in collaboration with CRIS (Centre for Railway Information Systems). The Waltair (WAT) Division — serving Visakhapatnam Port, RINL steel, and petroleum freight — was selected as pilot. Framework spans data acquisition, model layer, analytics, and a cloud dashboard for remote monitoring. Presented at RAIL 26, Budapest.</p>
+        <div class="proj-links">
+          <a href="https://home.iitk.ac.in/~vyas/tmrs/index.html" target="_blank" class="proj-link">TMRS</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-secondary">
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Railways · Instrumentation</span>
+        <h4>Wheel Impact Load Detection System (WILD)</h4>
+        <p>Design and development of instrumentation system for wheel-flat detection — RDSO, 2001. Pioneering on-track load measurement system for Indian Railways.</p>
+        <a href="https://home.iitk.ac.in/~vyas/WILD/systemdescription.html" target="_blank" class="proj-link">Details →</a>
+      </div>
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Automotive · Electronics</span>
+        <h4>Electronic Stability Program for Automobiles</h4>
+        <p>Consortium project with IIT Bombay, TATA Motors, M&amp;M, Ashok Leyland, TCS, Pricol — development of ABS, TCS and ESC for automobiles. Supported by CAR–TIFAC, DST.</p>
+      </div>
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Space · MEMS</span>
+        <h4>IITK NanoSatellite — JUGNU</h4>
+        <p>Design, development and launch of a MEMS-based micro-satellite. Project Coordinator under ISRO support. Successfully launched 2011.</p>
+        <a href="https://home.iitk.ac.in/~vyas/Jugnu/index.html" target="_blank" class="proj-link">Details →</a>
+      </div>
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Power · DST</span>
+        <h4>Condition Monitoring of Power Generation Machinery</h4>
+        <p>Instrumentation systems for health monitoring of critical rotating machines for electric power generation. Joint project with CSIO Chandigarh, BHEL and NTPC. DST funded, 1996–2001.</p>
+      </div>
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Aerospace · ARDB</span>
+        <h4>Turbine Blade Life Estimation Software</h4>
+        <p>Software development for life estimation of turbine blades, and development of new techniques for determination of damping in rotors. Aeronautical Research &amp; Development Board, MoD, 1992–2000.</p>
+      </div>
+
+      <div class="project-item-sm">
+        <span class="proj-tag">Smart Systems</span>
+        <h4>B-SMART / NPMASS</h4>
+        <p>Board for Smart Materials Research and Technology; National Programme on Micro and Smart Systems. National coordinator and project leader.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWS ── -->
+<section id="news">
+  <div class="section-header">
+    <span class="section-tag mono">// 03 · NEWS &amp; MEDIA</span>
+    <h2>Press Coverage</h2>
+  </div>
+  <div class="news-grid">
+
+    <div class="news-group">
+      <h4 class="news-category">Industry 4.0 at MCF Raebareli</h4>
+      <ul>
+        <li><a href="https://pib.gov.in/PressReleasePage.aspx?PRID=1586545" target="_blank">Press Information Bureau (PIB), Government of India</a></li>
+        <li><a href="https://cio.economictimes.indiatimes.com/news/strategy-and-management/industry-4-0-railways-to-integrate-big-data-ai/71369653" target="_blank">Economic Times CIO — Railways to integrate Big Data &amp; AI</a></li>
+        <li><a href="https://swarajyamag.com/news-brief/industry-40-powered-by-indian-railways-iit-kanpur-heres-what-indias-first-smart-coach-factory-will-look-like" target="_blank">Swarajya Magazine — India's First Smart Coach Factory</a></li>
+        <li><a href="https://www.deccanherald.com/national/north-and-central/railways-launches-pilot-project-to-usher-industry-40-764727.html" target="_blank">Deccan Herald — Pilot Project Launch</a></li>
+        <li><a href="https://www.business-standard.com/article/news-ani/pilot-project-at-rae-bareli-coach-factory-to-usher-industry-4-0-119092800860_1.html" target="_blank">Business Standard / ANI</a></li>
+        <li><a href="https://www.outlookindia.com/newsscroll/pilot-project-to-introduce-industry-40-launched-by-railways/1629469" target="_blank">Outlook India</a></li>
+        <li><a href="https://www.ndtv.com/education/industry-4-0-railway-ministry-and-iit-kanpur-digital-project-to-host-ai-big-data-machine-learning-2108763" target="_blank">NDTV — AI, Big Data, Machine Learning at Railways</a></li>
+      </ul>
+    </div>
+
+    <div class="news-group">
+      <h4 class="news-category">Technology Mission for Indian Railways (TMIR)</h4>
+      <ul>
+        <li><a href="https://timesofindia.indiatimes.com/city/kanpur/Rlys-appoint-IIT-K-Prof-as-TMIR-chief/articleshow/47185232.cms" target="_blank">Times of India — IIT-K Prof appointed TMIR Chief</a></li>
+        <li>Rail Budget (2015) — TMIR Announcement</li>
+      </ul>
+    </div>
+
+    <div class="news-group">
+      <h4 class="news-category">Other Milestones</h4>
+      <ul>
+        <li>Electronic Stability Control System — <em>Times of India, August 20, 2007</em></li>
+        <li>IITK NanoSatellite JUGNU — <em>Amar Ujjala, April 14, 2008 · Times of India, April 4, 2008</em></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-tag mono">// 04 · ABOUT</span>
+    <h2>Founder &amp; Principal</h2>
+  </div>
+
+  <div class="about-layout">
+    <div class="about-photo">
+      <div class="photo-placeholder">
+        <span class="mono">NSV</span>
+        <p class="mono" style="font-size:0.7rem;opacity:0.5;margin-top:8px;">Photo to be added</p>
+      </div>
+      <div class="about-contact-card">
+        <p class="mono" style="font-size:0.8rem;color:var(--amber)">vyas@iitk.ac.in</p>
+        <p class="mono" style="font-size:0.8rem">+91 9956292801</p>
+        <p style="font-size:0.8rem">NL-103, MED, IIT Kanpur — 208016</p>
+        <a href="http://home.iitk.ac.in/~vyas/" target="_blank" class="btn-ghost" style="font-size:0.8rem;padding:6px 14px;margin-top:12px;display:inline-block">Institutional Page →</a>
+      </div>
+    </div>
+
+    <div class="about-bio">
+      <h3>Prof. Nalinaksh S. Vyas</h3>
+      <p class="about-title">Professor Emeritus, Department of Mechanical Engineering, IIT Kanpur<br />
+      Former Chairman, Technology Mission for Indian Railways (TMIR), Govt. of India</p>
+
+      <p>Prof. Vyas holds a Ph.D. (1986), M.Tech. (1983) and B.Tech. (1980) — all in Mechanical Engineering — from IIT Delhi and IIT Bombay, and has been a faculty member at IIT Kanpur since 1987. His research spans Machine Dynamics, Nonlinear Parameter Estimation, Instrumentation, and AI/ML applications for Smart Infrastructure and Industry 4.0.</p>
+
+      <p>As Chairman of TMIR (till April 2022), he spearheaded the digital modernisation of one of the world's largest railway networks, including Industry 4.0 protocols at MCF Raebareli, on-board diagnostics for rolling stock, and deep learning for rail asset management.</p>
+
+      <p>He has held leadership roles including Head of Mechanical Engineering, Nuclear Engineering, and Centre for Mechatronics at IIT Kanpur; Vice Chancellor of Rajasthan Technical University (2013–15); and Visiting Professor at Virginia Tech, INSA Lyon, Lulea University, and National Chung Cheng University. He is a Founding Director of the International Society on Asset Management, Australia.</p>
+
+      <div class="about-numbers">
+        <div class="about-num"><span>15<sup>+</sup></span><label>PhD Students</label></div>
+        <div class="about-num"><span>90<sup>+</sup></span><label>M.Tech. Theses</label></div>
+        <div class="about-num"><span>100<sup>+</sup></span><label>Publications</label></div>
+      </div>
+
+      <div class="publications-section">
+        <h4>Select Recent Publications</h4>
+        <ul class="pub-list">
+          <li><span class="pub-venue">Vehicle System Dynamics, 2021</span> — Rail–Wheel contact force estimation via neural networks from axlebox accelerometers (27 citations)</li>
+          <li><span class="pub-venue">RAIL 26, Budapest 2026</span> — Industry 4.0 platform at MCF Raebareli: shopfloor monitoring, digital twin scheduling, RFID tracking</li>
+          <li><span class="pub-venue">Mechanical Systems and Signal Processing</span> — Stiffness nonlinearity classification through structured response component analysis using Volterra Series</li>
+          <li><span class="pub-venue">Journal of Sound and Vibration</span> — Nonlinear parameter estimation with Volterra series using method of recursive iteration through harmonic probing</li>
+          <li><span class="pub-venue">ASME Journal of Vibration and Acoustics</span> — Nonlinear parameter estimation in rotor-bearing systems using Volterra series and harmonic probing</li>
+          <li><span class="pub-venue">Int. J. Advanced Manufacturing Technology, 2008</span> — Cutting tool condition monitoring for high-speed turning using vibration and strain analysis</li>
+        </ul>
+        <p style="margin-top:1rem;font-size:0.85rem;opacity:0.6">Full publication list available on the <a href="http://home.iitk.ac.in/~vyas/" target="_blank" style="color:var(--amber)">institutional website</a>.</p>
+      </div>
+
+      <div class="iitk-badge">
+        <span>Incubated at</span>
+        <strong>IIT Kanpur</strong>
+        <span>under the Faculty Entrepreneurship Program (FEP)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-tag mono">// 05 · CONTACT</span>
+    <h2>Get In Touch</h2>
+    <p class="section-sub">Integration, Monitoring and Analytics of Large Systems &amp; Processes</p>
+  </div>
+
+  <div class="contact-layout">
+    <div class="contact-info">
+      <div class="contact-block">
+        <span class="mono contact-label">Email</span>
+        <a href="mailto:vyas@iitk.ac.in">vyas@iitk.ac.in</a>
+        <a href="mailto:vyas.nalinaksh@gmail.com">vyas.nalinaksh@gmail.com</a>
+      </div>
+      <div class="contact-block">
+        <span class="mono contact-label">Phone</span>
+        <span>+91 9956292801</span>
+        <span>+91 512 2597040 (Office)</span>
+      </div>
+      <div class="contact-block">
+        <span class="mono contact-label">Address</span>
+        <span>NL-103, Department of Mechanical Engineering</span>
+        <span>IIT Kanpur, Uttar Pradesh — 208016, India</span>
+      </div>
+      <div class="contact-block">
+        <span class="mono contact-label">Links</span>
+        <a href="http://home.iitk.ac.in/~vyas/" target="_blank">Institutional Website →</a>
+        <a href="https://www.ofc-industantra.com/" target="_blank">Industry 4.0 Project Portal →</a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h4>Send a Message</h4>
+      <div class="form-row">
+        <input type="text" placeholder="Name" class="form-input" />
+        <input type="email" placeholder="Email" class="form-input" />
+      </div>
+      <input type="text" placeholder="Organisation" class="form-input full" />
+      <textarea placeholder="Your message..." class="form-input full" rows="5"></textarea>
+      <button class="btn-primary" onclick="alert('Please send enquiries directly to vyas@iitk.ac.in')">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-indus">Indus</span><span class="brand-tantra">TANTRA</span>
+      <span style="display:block;font-size:0.75rem;opacity:0.4;margin-top:4px">Pvt. Ltd. · IIT Kanpur FEP</span>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#projects">Projects</a>
+      <a href="#news">News</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy mono">
+      © 2024 IndusTANTRA Pvt. Ltd. · All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
