@@ -96,22 +96,8 @@
   <!-- Product card grid — click to expand -->
   <div class="prod-grid" id="prod-grid">
 
-    <!-- 1 MaintelliGenX -->
     <div class="prod-tile" onclick="openDetail('maintellix')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <rect x="40" y="26" width="40" height="20" rx="3" fill="#1c2640" stroke="#e8a020" stroke-width="1.2"/>
-          <text x="60" y="39" text-anchor="middle" fill="#e8a020" font-size="7" font-family="'JetBrains Mono',monospace">MaintelliGenX</text>
-          <rect x="5" y="5" width="28" height="14" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="19" y="14" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">RotorTwinX</text>
-          <rect x="87" y="5" width="28" height="14" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="101" y="14" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">AeroTwinX</text>
-          <rect x="5" y="52" width="28" height="14" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="19" y="61" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">PowerTwin</text>
-          <rect x="87" y="52" width="28" height="14" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="101" y="61" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">RailTwin</text>
-          <line x1="33" y1="12" x2="40" y2="30" stroke="#e8a020" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.5"/>
-          <line x1="87" y1="12" x2="80" y2="30" stroke="#e8a020" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.5"/>
-          <line x1="33" y1="59" x2="40" y2="46" stroke="#e8a020" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.5"/>
-          <line x1="87" y1="59" x2="80" y2="46" stroke="#e8a020" stroke-width="0.6" stroke-dasharray="2,1.5" opacity="0.5"/>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#e8a020">⬡</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Flagship · Integrated Platform</p>
         <h3>MaintelliGenX</h3>
@@ -120,89 +106,38 @@
       </div>
     </div>
 
-    <!-- 2 RotorTwinX -->
     <div class="prod-tile" onclick="openDetail('rotortwin')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="35" r="22" fill="none" stroke="#4a5a70" stroke-width="0.8" stroke-dasharray="3,2"/>
-          <circle cx="60" cy="35" r="14" fill="#151d2e" stroke="#e8a020" stroke-width="1"/>
-          <circle cx="60" cy="35" r="5" fill="#e8a020" opacity="0.7"/>
-          <line x1="60" y1="13" x2="60" y2="21" stroke="#2eb8e0" stroke-width="1.5"/>
-          <line x1="60" y1="49" x2="60" y2="57" stroke="#2eb8e0" stroke-width="1.5"/>
-          <line x1="38" y1="35" x2="46" y2="35" stroke="#2eb8e0" stroke-width="1.5"/>
-          <line x1="74" y1="35" x2="82" y2="35" stroke="#2eb8e0" stroke-width="1.5"/>
-          <text x="60" y="67" text-anchor="middle" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">STFT · CNN · t-SNE · 93–100% acc.</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2eb8e0">⟳</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Rotating Machinery · VibLab IITK</p>
         <h3>RotorTwinX</h3>
-        <p>Vibration-based fault classification for rotor-bearing systems using deep learning and spectral analysis.</p>
+        <p>Vibration-based fault classification for rotor-bearing systems using STFT, CNN, and t-SNE. 93–100% accuracy.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 3 AeroEngineTwinX -->
     <div class="prod-tile" onclick="openDetail('aerotwin')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <line x1="10" y1="60" x2="110" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="10" y1="10" x2="10" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <polyline points="10,14 28,16 46,22 62,31 78,43 92,52 106,59" fill="none" stroke="#2eb8e0" stroke-width="1.8" stroke-linecap="round"/>
-          <line x1="10" y1="50" x2="110" y2="50" stroke="#e84040" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.7"/>
-          <text x="8" y="10" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">HI</text>
-          <text x="95" y="58" fill="#e84040" font-size="5" font-family="'JetBrains Mono',monospace">thresh</text>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">C-MAPSS · 709 engines · 159,359 cycles</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2eb8e0">✈</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Turbofan Engine Prognostics</p>
         <h3>AeroEngineTwinX</h3>
-        <p>Physics-informed health index for gas turbine engines. NASA C-MAPSS validated. No run-to-failure labels needed.</p>
+        <p>Physics-informed Health Index for gas turbine engines. NASA C-MAPSS validated. No run-to-failure labels needed.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 4 PowerPlantTwin -->
     <div class="prod-tile" onclick="openDetail('powerplant')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <line x1="10" y1="60" x2="110" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="10" y1="10" x2="10" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="30" y1="60" x2="30" y2="20" stroke="#2eb8e0" stroke-width="2.5" opacity="0.9"/>
-          <line x1="45" y1="60" x2="45" y2="38" stroke="#2eb8e0" stroke-width="2" opacity="0.7"/>
-          <line x1="60" y1="60" x2="60" y2="28" stroke="#e8a020" stroke-width="2.5" opacity="0.85"/>
-          <line x1="75" y1="60" x2="75" y2="45" stroke="#2eb8e0" stroke-width="1.5" opacity="0.6"/>
-          <line x1="90" y1="60" x2="90" y2="32" stroke="#e84040" stroke-width="2.5" opacity="0.8"/>
-          <text x="56" y="16" fill="#e8a020" font-size="5" font-family="'JetBrains Mono',monospace">2×</text>
-          <text x="86" y="28" fill="#e84040" font-size="5" font-family="'JetBrains Mono',monospace">fault</text>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">FFT · Harmonic Analysis · HI Tracking</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#e8a020">⚡</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Power Generation Assets</p>
         <h3>PowerPlantTwin</h3>
-        <p>FFT-based condition monitoring for turbines and generators. Migrates legacy LabVIEW PoP Monitor to Python analytics.</p>
+        <p>FFT-based condition monitoring for turbines and generators. Migrates legacy LabVIEW PoP Monitor to Python.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 5 Real-Time Monitoring -->
     <div class="prod-tile" onclick="openDetail('rtmon')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="15" width="22" height="14" rx="2" fill="#151d2e" stroke="#2a5a8a" stroke-width="0.8"/><text x="19" y="24" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">CNC</text>
-          <rect x="35" y="15" width="22" height="14" rx="2" fill="#151d2e" stroke="#2a5a8a" stroke-width="0.8"/><text x="46" y="24" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">Robot</text>
-          <rect x="62" y="15" width="22" height="14" rx="2" fill="#151d2e" stroke="#e8a020" stroke-width="0.8"/><text x="73" y="24" text-anchor="middle" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">RFID</text>
-          <line x1="19" y1="29" x2="19" y2="42" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="46" y1="29" x2="46" y2="42" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="73" y1="29" x2="73" y2="42" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="19" y1="42" x2="73" y2="42" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="46" y1="42" x2="46" y2="50" stroke="#4a5a70" stroke-width="0.7"/>
-          <rect x="30" y="50" width="32" height="12" rx="2" fill="#1c2640" stroke="#2eb8e0" stroke-width="0.8"/><text x="46" y="59" text-anchor="middle" fill="#2eb8e0" font-size="5.5" font-family="'JetBrains Mono',monospace">Cloud VPS</text>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">DAQ · HMI · RFID · MCF Raebareli</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2eb8e0">◈</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">DAQ · Dashboard · HMI</p>
         <h3>Real-Time Monitoring</h3>
@@ -211,165 +146,83 @@
       </div>
     </div>
 
-    <!-- 6 Process Scheduling -->
     <div class="prod-tile" onclick="openDetail('sched')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <text x="4" y="10" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">M1</text><rect x="16" y="4" width="40" height="8" rx="1" fill="#e8a020" opacity="0.75"/><rect x="58" y="4" width="26" height="8" rx="1" fill="#2eb8e0" opacity="0.6"/>
-          <text x="4" y="24" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">M2</text><rect x="16" y="18" width="20" height="8" rx="1" fill="#2eb8e0" opacity="0.6"/><rect x="38" y="18" width="34" height="8" rx="1" fill="#e8a020" opacity="0.6"/><rect x="74" y="18" width="22" height="8" rx="1" fill="#2a8a5a" opacity="0.6"/>
-          <text x="4" y="38" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">M3</text><rect x="16" y="32" width="30" height="8" rx="1" fill="#2a8a5a" opacity="0.6"/><rect x="48" y="32" width="36" height="8" rx="1" fill="#e84040" opacity="0.5"/>
-          <text x="4" y="52" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">M4</text><rect x="16" y="46" width="16" height="8" rx="1" fill="#e84040" opacity="0.5"/><rect x="34" y="46" width="40" height="8" rx="1" fill="#e8a020" opacity="0.5"/>
-          <line x1="82" y1="2" x2="82" y2="56" stroke="#e84040" stroke-width="0.8" stroke-dasharray="2,1.5" opacity="0.7"/>
-          <text x="8" y="66" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">SimPy · Priority Dispatch · Gantt</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#e8a020">▦</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Shopfloor Digital Twin</p>
         <h3>Process Scheduling</h3>
-        <p>Discrete-event simulation of the production floor with priority dispatching. Reduced MCF lead time by 10 days.</p>
+        <p>Discrete-event simulation with priority dispatching and Gantt chart generation. Reduced MCF lead time by 10 days.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 7 Smart City Digital Twin -->
     <div class="prod-tile" onclick="openDetail('smartcity')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <!-- City grid roads -->
-          <line x1="20" y1="10" x2="20" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="50" y1="10" x2="50" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="80" y1="10" x2="80" y2="60" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="10" y1="25" x2="110" y2="25" stroke="#4a5a70" stroke-width="0.7"/>
-          <line x1="10" y1="45" x2="110" y2="45" stroke="#4a5a70" stroke-width="0.7"/>
-          <!-- Congestion dots -->
-          <circle cx="20" cy="25" r="4" fill="#e84040" opacity="0.8"/>
-          <circle cx="50" cy="25" r="3" fill="#e8a020" opacity="0.8"/>
-          <circle cx="80" cy="25" r="2.5" fill="#2a8a5a" opacity="0.8"/>
-          <circle cx="20" cy="45" r="2.5" fill="#2a8a5a" opacity="0.8"/>
-          <circle cx="50" cy="45" r="4" fill="#e84040" opacity="0.8"/>
-          <circle cx="80" cy="45" r="3" fill="#e8a020" opacity="0.7"/>
-          <!-- IoT nodes -->
-          <circle cx="35" cy="10" r="2" fill="#2eb8e0" opacity="0.7"/>
-          <circle cx="65" cy="10" r="2" fill="#2eb8e0" opacity="0.7"/>
-          <circle cx="95" cy="10" r="2" fill="#2eb8e0" opacity="0.7"/>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">OSMnx · IoT · Congestion · Simhastha</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2a8a5a">🏙</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Smart City · Urban Twin</p>
         <h3>Smart City Digital Twin</h3>
-        <p>City-scale digital twin for traffic, mobility, and urban infrastructure. Live congestion visualisation with event scenario modelling.</p>
+        <p>City-scale digital twin for traffic, mobility, and urban infrastructure — live congestion mapping with event scenario modelling.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 8 Hyper-ML for SCADA -->
     <div class="prod-tile" onclick="openDetail('scada')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="52" width="104" height="12" rx="2" fill="#0a0e17" stroke="#e8a020" stroke-width="0.8"/><text x="60" y="60" text-anchor="middle" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">Field Layer · Sensors · Actuators</text>
-          <rect x="8" y="37" width="104" height="12" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="60" y="45" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">SCADA / DCS / PLC</text>
-          <rect x="8" y="22" width="104" height="12" rx="2" fill="#1c2640" stroke="#2eb8e0" stroke-width="1.2"/><text x="60" y="30" text-anchor="middle" fill="#2eb8e0" font-size="5.5" font-family="'JetBrains Mono',monospace">Hyper-ML Layer  ← IndusTANTRA</text>
-          <rect x="8" y="7" width="104" height="12" rx="2" fill="#0a0e17" stroke="#e8a020" stroke-width="0.8"/><text x="60" y="15" text-anchor="middle" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">Digital Twin · Dashboard · Enterprise</text>
-          <line x1="60" y1="19" x2="60" y2="22" stroke="#2eb8e0" stroke-width="0.8" opacity="0.5"/>
-          <line x1="60" y1="34" x2="60" y2="37" stroke="#4a5a70" stroke-width="0.8" opacity="0.5"/>
-          <line x1="60" y1="49" x2="60" y2="52" stroke="#4a5a70" stroke-width="0.8" opacity="0.5"/>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#e8a020">⚙</div>
       <div class="prod-tile-body">
-        <p class="prod-tile-tag mono">SCADA · Power Systems · Infrastructure</p>
+        <p class="prod-tile-tag mono">SCADA · Power Infrastructure</p>
         <h3>Hyper-ML for SCADA</h3>
-        <p>Non-intrusive ML overlay on existing SCADA systems — anomaly detection, RUL prediction, and digital twin bridging without touching the control plane.</p>
+        <p>Non-intrusive ML overlay on existing SCADA systems — anomaly detection, RUL prediction, digital twin bridging.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 9 Comprehensive Community Health -->
     <div class="prod-tile" onclick="openDetail('health')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <!-- Health cross -->
-          <rect x="48" y="18" width="10" height="28" rx="2" fill="#2eb8e0" opacity="0.8"/>
-          <rect x="38" y="28" width="30" height="10" rx="2" fill="#2eb8e0" opacity="0.8"/>
-          <!-- Biomarker bars -->
-          <rect x="8" y="50" width="16" height="8" rx="1" fill="#2a8a5a" opacity="0.7"/>
-          <rect x="26" y="44" width="16" height="14" rx="1" fill="#e8a020" opacity="0.7"/>
-          <rect x="44" y="54" width="16" height="4" rx="1" fill="#2a8a5a" opacity="0.7"/>
-          <rect x="62" y="40" width="16" height="18" rx="1" fill="#e84040" opacity="0.7"/>
-          <rect x="80" y="48" width="16" height="10" rx="1" fill="#2a8a5a" opacity="0.7"/>
-          <rect x="98" y="52" width="16" height="6" rx="1" fill="#e8a020" opacity="0.7"/>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">HealthCamp · 18+ biomarkers · PDF reports</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2eb8e0">✚</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Social Impact · Public Health</p>
         <h3>Comprehensive Community Health</h3>
-        <p>AI-powered analytics platform for community health camps — biomarker analysis, risk stratification, and individual + population PDF reports.</p>
+        <p>AI analytics platform for health camp data — 18+ biomarker risk scores, individual + population PDF reports.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- 10 Dr_AIde -->
     <div class="prod-tile" onclick="openDetail('draide')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <!-- Chat bubbles + AI motif -->
-          <rect x="8" y="10" width="60" height="16" rx="4" fill="#1c2640" stroke="#2eb8e0" stroke-width="0.8"/>
-          <text x="38" y="21" text-anchor="middle" fill="#2eb8e0" font-size="5.5" font-family="'JetBrains Mono',monospace">Patient: symptoms...</text>
-          <rect x="52" y="32" width="60" height="16" rx="4" fill="#151d2e" stroke="#e8a020" stroke-width="0.8"/>
-          <text x="82" y="43" text-anchor="middle" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">Dr_AIde: analysis</text>
-          <!-- Brain/AI nodes -->
-          <circle cx="20" cy="58" r="4" fill="#2eb8e0" opacity="0.5"/>
-          <circle cx="35" cy="54" r="3" fill="#e8a020" opacity="0.5"/>
-          <circle cx="50" cy="58" r="4" fill="#2eb8e0" opacity="0.5"/>
-          <line x1="24" y1="58" x2="32" y2="55" stroke="#4a5a70" stroke-width="0.6"/>
-          <line x1="38" y1="54" x2="46" y2="57" stroke="#4a5a70" stroke-width="0.6"/>
-          <text x="58" y="62" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">AI clinical decision support</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#2eb8e0">⚕</div>
       <div class="prod-tile-body">
         <p class="prod-tile-tag mono">Social Impact · Clinical AI</p>
         <h3>Dr_AIde</h3>
-        <p>AI-powered clinical decision support system — symptom analysis, differential diagnosis assistance, and triage intelligence for healthcare providers.</p>
+        <p>AI-powered clinical decision support — symptom analysis, differential diagnosis, and triage intelligence for healthcare providers.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
-    <!-- OT-IT Bridge -->
     <div class="prod-tile" onclick="openDetail('otit')">
-      <div class="prod-tile-vis">
-        <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="8" width="104" height="12" rx="2" fill="#0a0e17" stroke="#2eb8e0" stroke-width="0.8"/><text x="60" y="17" text-anchor="middle" fill="#2eb8e0" font-size="5.5" font-family="'JetBrains Mono',monospace">IT · Analytics · Cloud</text>
-          <rect x="8" y="24" width="104" height="12" rx="2" fill="#151d2e" stroke="#4a5a70" stroke-width="0.8"/><text x="60" y="33" text-anchor="middle" fill="#8fa0b8" font-size="5.5" font-family="'JetBrains Mono',monospace">OT–IT Bridge Layer</text>
-          <rect x="8" y="40" width="104" height="12" rx="2" fill="#1c2640" stroke="#e8a020" stroke-width="0.8"/><text x="60" y="49" text-anchor="middle" fill="#e8a020" font-size="5.5" font-family="'JetBrains Mono',monospace">OT · PLCs · Controllers · HMI</text>
-          <text x="8" y="68" fill="#4a5a70" font-size="5.5" font-family="'JetBrains Mono',monospace">Modbus · OPC-UA · MQTT · Indigenous</text>
-        </svg>
-      </div>
+      <div class="prod-icon" style="color:#8fa0b8">⇄</div>
       <div class="prod-tile-body">
-        <p class="prod-tile-tag mono">Operational · Information Technology</p>
+        <p class="prod-tile-tag mono">OT · IT Integration</p>
         <h3>OT–IT Bridge</h3>
-        <p>Indigenous platform bridging shopfloor controllers and embedded systems with enterprise analytics — secure, scalable, vendor-neutral.</p>
+        <p>Indigenous platform bridging shopfloor controllers with enterprise analytics — Modbus, OPC-UA, MQTT, RFID.</p>
         <span class="prod-tile-cta mono">Explore →</span>
       </div>
     </div>
 
   </div><!-- /prod-grid -->
 
-  <!-- Detail panel (slides in on card click) -->
+  <!-- Detail panel -->
   <div class="prod-detail" id="prod-detail">
     <button class="detail-close" onclick="closeDetail()">✕ Close</button>
-    <div class="detail-inner" id="detail-inner"><!-- content injected by JS --></div>
+    <div class="detail-inner" id="detail-inner"></div>
   </div>
 
   <div class="tech-domains">
     <span class="section-tag mono">// TECHNOLOGY DOMAINS</span>
     <div class="domains-strip">
-      <span>Component & System Dynamics</span>
+      <span>Component &amp; System Dynamics</span>
       <span>Manufacturing Process Optimisation</span>
-      <span>Sensors & Instrumentation</span>
-      <span>Imaging & Quality Assurance</span>
+      <span>Sensors &amp; Instrumentation</span>
+      <span>Imaging &amp; Quality Assurance</span>
       <span>Machine Learning · Deep Learning</span>
-      <span>Health Diagnosis & Prognosis</span>
+      <span>Health Diagnosis &amp; Prognosis</span>
       <span>Rail–Wheel Contact Dynamics</span>
       <span>Nonlinear Parameter Estimation</span>
       <span>Smart City Systems</span>
