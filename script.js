@@ -100,3 +100,123 @@ const statsObserver = new IntersectionObserver((entries) => {
 
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
+
+// ── PRODUCT DETAIL DATA ──
+const PRODUCTS = {
+  maintellix: {
+    name: "MaintelliGenX",
+    tag: "Flagship · Integrated Digital Twin Platform",
+    desc: `Unified orchestration layer integrating RotorTwinX, AeroEngineTwinX, PowerPlantTwin, RailTwin, and the Process Scheduling module into a single physics-informed, data-driven operations intelligence platform. One landing screen — domain selector — one coherent dashboard.`,
+    desc2: `Session state is namespaced per module; a unified DOCX/PDF report engine serves all domains. Validated on NASA C-MAPSS (709 engines, 159,359 cycles) for the aerospace twin and on MCF Raebareli shopfloor data for the process modules.`,
+    features: ["Domain-selector landing: choose asset class, load full twin module","Shared Health Index engine — monotonically decreasing, physics-grounded","Unified DOCX/PDF automated report generation","Streamlit · PyTorch · SimPy · Cloud VPS architecture","NASA C-MAPSS & MCF Raebareli validated"],
+    svgKey: "arch"
+  },
+  rotortwin: {
+    name: "RotorTwinX",
+    tag: "Rotating Machinery Diagnostics · VibLab IIT Kanpur",
+    desc: `Digital twin for rotor-bearing fault classification. Raw vibration signals are processed via STFT into time-frequency spectrograms, fed to the VibLab IIT Kanpur CNN v2, and visualised with t-SNE clustering. Detects Healthy, Unbalance, Crack, BPFO, and BPFI conditions.`,
+    desc2: `Achieves 93–100% accuracy on a 5-class rotor dataset. Multi-architecture support: VibLab CNN v2, ResNetMini, CNN1D-LSTM. Health Index is extracted from feature-layer activations and tracked over operational time. Automated DOCX/PDF diagnostic report generation.`,
+    features: ["STFT spectrogram pipeline (raw signal → image → CNN)","VibLab IITK CNN v2 · ResNetMini · CNN1D-LSTM","t-SNE dimensionality reduction visualisation","BPFO / BPFI bearing fault frequency tracking","93–100% accuracy · 5-class rotor-bearing dataset","Automated DOCX/PDF diagnostic report"],
+    svgKey: "rotor"
+  },
+  aerotwin: {
+    name: "AeroEngineTwinX",
+    tag: "Turbofan Engine Prognostics · NASA C-MAPSS",
+    desc: `Physics-informed digital twin for gas turbine engine health management. Thermodynamic cycle reconstruction from partial sensor data yields a component-resolved Health Index — Fan, HPC, HPT, LPT — without requiring run-to-failure labels.`,
+    desc2: `Validated across all four NASA C-MAPSS sub-datasets: 87% component diagnosis accuracy on single-fault configurations, strong HI–RUL correlation. Fleet-wide monitoring dashboard with per-engine deep-dive, T-s / P-v diagrams, and automated report generation. Targets MRO practitioners directly.`,
+    features: ["4-step physics-informed HI pipeline — no RUL labels needed","T-s and P-v thermodynamic cycle reconstruction","87% component diagnosis accuracy (C-MAPSS single-fault)","Fleet monitoring: triage · tracking · automated reports","Stratified confidence levels per component","8-tab interactive dashboard"],
+    svgKey: "aero"
+  },
+  powerplant: {
+    name: "PowerPlantTwin",
+    tag: "Power Generation Asset Monitoring",
+    desc: `Condition monitoring digital twin for power generation assets — turbines, generators, auxiliary machinery. Translates legacy LabVIEW PoP Monitor acquisitions into a Python-based analytics pipeline with FFT spectral analysis and Health Index tracking.`,
+    desc2: `Shares the vibration processing engine with RotorTwinX, with domain-specific parameter presets (shaft speeds, bearing frequencies typical for turbines and generators). Harmonic identification (1×, 2× and fault-frequency lines), anomaly detection, and HI trending over operational life.`,
+    features: ["LabVIEW PoP Monitor → Python migration pathway","FFT spectral analysis · harmonic identification","1× 2× shaft-speed and fault-frequency tracking","Health Index trending over operational life","Shared RotorTwinX vibration engine","Anomaly detection with configurable thresholds"],
+    svgKey: "power"
+  },
+  rtmon: {
+    name: "Real-Time Monitoring",
+    tag: "DAQ · Dashboard · HMI · Shopfloor",
+    desc: `Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. Deployed and validated at MCF Raebareli, India's most modern coach factory.`,
+    desc2: `RFID-based material and WIP tracking integrated with an Android HMI for operator-machine geo-location. Cloud VPS relay enables remote access by plant managers and analysts anywhere. Historical storage supports utilisation analytics, OEE, and cycle time trending.`,
+    features: ["Multi-machine DAQ homogenisation (CNC, robot, manual)","RFID WIP tracking · Android HMI geo-location","Live web dashboard with configurable views","Utilisation · cycle time · OEE analytics","Cloud VPS relay for remote monitoring","Historical data storage and retrieval"],
+    svgKey: "iot"
+  },
+  sched: {
+    name: "Process Scheduling",
+    tag: "Shopfloor Digital Twin · SimPy Discrete-Event",
+    desc: `Discrete-event simulation of the production shopfloor — each machine and component modelled as a Python/SimPy object with state, queue, and operation sequence. Automated schedule generation, scenario analysis, and bottleneck identification under any order mix.`,
+    desc2: `Deployed at MCF Raebareli Shell Shop. Priority-based dispatching reduced lead time for the highest-priority coach variants by up to 10 days vs random dispatching. Bottleneck analysis identified SH0110 and UF0610 as primary constraint stations (~86–88% utilisation).`,
+    features: ["SimPy discrete-event simulation at 1-minute resolution","Each machine and component modelled as Python objects","Priority-based job dispatching rules","Gantt chart + machine loading chart generation","Bottleneck identification (utilisation analytics)","ERP integration flexibility"],
+    svgKey: "gantt"
+  },
+  smartcity: {
+    name: "Smart City Digital Twin",
+    tag: "Urban Systems · Traffic · IoT · Event Management",
+    desc: `City-scale digital twin for traffic, mobility, and urban infrastructure management. Built on OSMnx for geospatial road network extraction, with synthetic congestion modelling and animated visualisation using Plotly and Folium. Designed for event scenario modelling and command-centre dashboards.`,
+    desc2: `Developed and tested for large-scale urban events. Congestion zones are dynamically colour-coded (green → red) across the road network. Framework is IoT-ready: once ANPR cameras, GPS buses, or sensor feeds are available, live data replaces the synthetic model — same codebase, different source. Scalable to sanitation logistics, emergency response, and public transport optimisation.`,
+    features: ["OSMnx road network extraction from OpenStreetMap","Animated congestion visualisation (green → red)","Event scenario modelling with zone multipliers","Streamlit browser dashboard — no proprietary software","IoT/ANPR/GPS integration pathway","CSV export for each simulated frame"],
+    svgKey: "city"
+  },
+  scada: {
+    name: "Hyper-ML for SCADA Systems",
+    tag: "Power Infrastructure · Non-Intrusive ML Overlay",
+    desc: `A non-intrusive Machine Learning overlay for existing SCADA and DCS systems in power utilities and critical infrastructure. Reads from the supervisory tier via OPC UA and IEC 61850/104 interfaces — without touching the control plane — and feeds anomaly alerts, RUL predictions, and digital twin signals upward to enterprise dashboards.`,
+    desc2: `Implements a four-phase value flywheel: richer SCADA data → accurate anomaly detection → precise failure prediction → operational optimisation → ROI → scale-up → more data. Six overlapping implementation phases across a 28-week pilot. Targets power utilities, water treatment, oil & gas, and any IEC 61850-compliant installation.`,
+    features: ["Non-intrusive overlay — no control-plane modification","OPC UA · IEC 61850/104 · Modbus interface","Anomaly detection · RUL prediction · fault classification","Digital Twin bridging for physics-informed insights","28-week pilot programme with phased value delivery","Value Flywheel: data → prediction → optimisation → ROI"],
+    svgKey: "scada"
+  },
+  health: {
+    name: "Comprehensive Community Health",
+    tag: "Social Impact · HealthCamp Analytics · Public Health",
+    desc: `AI-powered analytics platform built for community health camp data. Ingests biomarker-rich Excel datasets, applies 18+ computed risk scores (cardiovascular, liver, kidney, thyroid, metabolic syndrome, lifestyle), and produces individual patient PDFs alongside population-level community reports.`,
+    desc2: `Patients with incomplete entries are excluded from community analytics (individual reports still generated). Dashboard visualisations cover risk distributions, locality-level intelligence, and biomarker heatmaps. Reference ranges provided by the attending physicians are integrated for clinical accuracy. Styled with the Dr_AIde royal-blue theme for professional clinical presentation.`,
+    features: ["18+ biomarker computed risk scores","Individual patient PDF + community population report","Locality-level analytics and risk stratification","Physician-defined reference range integration","Incomplete-entry exclusion from community analytics","Streamlit web dashboard · no proprietary software"],
+    svgKey: "health"
+  },
+  draide: {
+    name: "Dr_AIde",
+    tag: "Clinical AI · Decision Support · Diagnosis Assistance",
+    desc: `AI-powered clinical decision support system designed to assist healthcare providers with symptom analysis, differential diagnosis generation, and triage intelligence. Bridges the gap between patient-reported symptoms and structured clinical decision pathways.`,
+    desc2: `Built with a professional royal-blue clinical UI theme. Intended for use by physicians, community health workers, and rural health centres where specialist access is limited. Complements the Comprehensive Community Health platform with individual-level AI clinical reasoning. Part of IndusTANTRA's social impact portfolio — applying the same deep-learning rigour developed for industrial systems to human health.`,
+    features: ["Symptom-to-differential diagnosis pathway","Triage intelligence for community health workers","Royal-blue clinical UI — professional presentation","Integrates with Community Health HealthCamp data","Designed for resource-limited healthcare settings","Social impact application of industrial AI methods"],
+    svgKey: "draide"
+  },
+  otit: {
+    name: "OT–IT Bridge",
+    tag: "Operational Technology · Information Technology Integration",
+    desc: `Indigenous platform bridging Operational Technology (PLCs, CNCs, embedded systems, RFID, cameras, industrial networks) with Information Technology (enterprise analytics, cloud dashboards, ERP). Ubiquitous, secure integration without dependence on proprietary vendor ecosystems.`,
+    desc2: `Supports Modbus, OPC-UA, MQTT, RS-232/485, and RFID protocols. Designed for the full range of Indian manufacturing environments — from fully automated CNC lines to semi-manual work centres. Secure data ownership is a design principle: no data leaves the facility without explicit authorisation.`,
+    features: ["Industrial controllers · embedded systems · HMI","Modbus · OPC-UA · MQTT · RS-232/485 · RFID","Camera and scanner integration","Secure, indigenous data ownership model","Scalable from a single machine to a full factory","Foundation layer for all IndusTANTRA platforms"],
+    svgKey: "otit"
+  }
+};
+
+function openDetail(key) {
+  const p = PRODUCTS[key];
+  if (!p) return;
+  const inner = document.getElementById('detail-inner');
+  inner.innerHTML = `
+    <div class="detail-left">
+      <h2>${p.name}</h2>
+      <span class="dtag">${p.tag}</span>
+      <p>${p.desc}</p>
+      <p>${p.desc2 || ''}</p>
+      <ul class="detail-features">${p.features.map(f => `<li>${f}</li>`).join('')}</ul>
+    </div>
+    <div class="detail-right">
+      <div style="text-align:center;padding:2rem;">
+        <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;color:var(--amber);opacity:0.15;line-height:1;">${p.name}</div>
+        <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--steel-dim);margin-top:1rem;">Detailed product documentation<br>available on request.</p>
+        <a href="#contact" onclick="closeDetail()" style="display:inline-block;margin-top:1.5rem;font-family:var(--font-mono);font-size:0.75rem;color:var(--amber);border:1px solid var(--amber-dim);padding:8px 20px;">Request Information →</a>
+      </div>
+    </div>`;
+  const panel = document.getElementById('prod-detail');
+  panel.classList.add('open');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeDetail() {
+  document.getElementById('prod-detail').classList.remove('open');
+}
