@@ -104,6 +104,7 @@ if (heroStats) statsObserver.observe(heroStats);
 // ── PRODUCT DETAIL DATA ──
 const PRODUCTS = {
   maintellix: {
+    img: "img_maintellix.jpg",
     name: "MaintelliGenX",
     tag: "Flagship · Integrated Digital Twin Platform",
     desc: "Unified orchestration layer integrating RotorTwinX, AeroEngineTwinX, PowerPlantTwin, RailTwin, and the Process Scheduling module into a single physics-informed, data-driven operations intelligence platform. One landing screen. Every asset. Every domain.",
@@ -113,6 +114,7 @@ const PRODUCTS = {
     badges: ["Physics-informed · Data-driven · Cloud-ready","Unified report engine: DOCX + PDF","Session-namespaced multi-domain architecture"]
   },
   rotortwin: {
+    img: "img_rotortwin.jpg",
     name: "RotorTwinX",
     tag: "Rotating Machinery Diagnostics · VibLab IIT Kanpur",
     desc: "Digital twin for rotor-bearing fault classification. Raw vibration signals are processed via STFT into time-frequency spectrograms, fed to the VibLab IIT Kanpur CNN v2, and visualised with t-SNE clustering. Detects Healthy, Unbalance, Crack, BPFO, and BPFI conditions.",
@@ -122,6 +124,7 @@ const PRODUCTS = {
     badges: ["HC · UB · CR · BPFO · BPFI fault classes","STFT spectrogram pipeline","t-SNE cluster visualisation"]
   },
   aerotwin: {
+    img: "img_aerotwin.jpg",
     name: "AeroEngineTwinX",
     tag: "Turbofan Engine Prognostics · NASA C-MAPSS",
     desc: "Physics-informed digital twin for gas turbine engine health management. Thermodynamic cycle reconstruction from partial sensor data yields a component-resolved Health Index — Fan, HPC, HPT, LPT — without requiring run-to-failure labels.",
@@ -131,6 +134,7 @@ const PRODUCTS = {
     badges: ["Fan · HPC · HPT · LPT component resolution","No run-to-failure labels required","8-tab MRO-ready dashboard"]
   },
   powerplant: {
+    img: "img_powerplant.jpg",
     name: "PowerPlantTwin",
     tag: "Power Generation Asset Monitoring",
     desc: "Condition monitoring digital twin for power generation assets — turbines, generators, auxiliary machinery. Translates legacy LabVIEW PoP Monitor acquisitions into a Python-based analytics pipeline with FFT spectral analysis and Health Index tracking.",
@@ -140,6 +144,7 @@ const PRODUCTS = {
     badges: ["1× · 2× harmonic identification","Fault-frequency bearing diagnostics","Shared RotorTwinX vibration engine"]
   },
   rtmon: {
+    img: "img_rtmon.jpg",
     name: "Real-Time Monitoring",
     tag: "DAQ · Dashboard · HMI · Shopfloor",
     desc: "Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. Deployed and validated at MCF Raebareli, India's most modern coach factory.",
@@ -149,6 +154,7 @@ const PRODUCTS = {
     badges: ["CNC · Robot · Manual machine DAQ","Android HMI geo-location","Live OEE and utilisation analytics"]
   },
   sched: {
+    img: "img_sched.jpg",
     name: "Process Scheduling",
     tag: "Shopfloor Digital Twin · SimPy Discrete-Event",
     desc: "Discrete-event simulation of the production shopfloor — each machine and component modelled as a Python/SimPy object. Automated schedule generation, scenario analysis, and bottleneck identification under any order mix and priority.",
@@ -158,6 +164,7 @@ const PRODUCTS = {
     badges: ["SimPy discrete-event engine","Priority-based job dispatching","Gantt + machine loading charts"]
   },
   smartcity: {
+    img: "img_smartcity.jpg",
     name: "Smart City Digital Twin",
     tag: "Urban Systems · Traffic · IoT · Event Management",
     desc: "City-scale digital twin for traffic, mobility, and urban infrastructure management. Built on OSMnx for geospatial road network extraction, with synthetic congestion modelling and animated visualisation. Designed for event scenario planning and command-centre dashboards.",
@@ -167,6 +174,7 @@ const PRODUCTS = {
     badges: ["Colour-coded congestion mapping","Event scenario zone multipliers","Streamlit dashboard — no proprietary tools"]
   },
   scada: {
+    img: "img_scada.jpg",
     name: "Hyper-ML for SCADA Systems",
     tag: "Power Infrastructure · Non-Intrusive ML Overlay",
     desc: "A non-intrusive Machine Learning overlay for existing SCADA and DCS systems in power utilities and critical infrastructure. Reads from the supervisory tier via OPC UA and IEC 61850/104 — without touching the control plane — and feeds anomaly alerts, RUL predictions, and digital twin signals upward.",
@@ -176,6 +184,7 @@ const PRODUCTS = {
     badges: ["Non-intrusive — no control-plane touch","Anomaly detection · RUL prediction","Value flywheel: data → ROI → scale"]
   },
   health: {
+    img: "img_health.jpg",
     name: "Comprehensive Community Health",
     tag: "Social Impact · HealthCamp Analytics · Public Health",
     desc: "AI-powered analytics platform for community health camp data. Ingests biomarker-rich Excel datasets, applies 18+ computed risk scores (cardiovascular, liver, kidney, thyroid, metabolic syndrome, lifestyle), and produces individual patient PDFs alongside population-level community reports.",
@@ -185,6 +194,7 @@ const PRODUCTS = {
     badges: ["Cardiovascular · Liver · Kidney · Thyroid risk","Physician reference range integration","Incomplete-entry safe exclusion"]
   },
   draide: {
+    img: "img_draide.jpg",
     name: "Dr_AIde",
     tag: "Clinical AI · Decision Support · Diagnosis Assistance",
     desc: "AI-powered clinical decision support system designed to assist healthcare providers with symptom analysis, differential diagnosis generation, and triage intelligence. Bridges the gap between patient-reported symptoms and structured clinical decision pathways.",
@@ -194,6 +204,7 @@ const PRODUCTS = {
     badges: ["Symptom-to-differential diagnosis","Community health worker interface","Social impact application of industrial AI"]
   },
   otit: {
+    img: "img_otit.jpg",
     name: "OT–IT Bridge",
     tag: "Operational Technology · Information Technology Integration",
     desc: "Indigenous platform bridging Operational Technology (PLCs, CNCs, embedded systems, RFID, cameras) with Information Technology (enterprise analytics, cloud dashboards, ERP). Secure integration without dependence on proprietary vendor ecosystems.",
@@ -221,7 +232,11 @@ function openDetail(key) {
   const right = document.getElementById('pov-right');
   const stats = p.stats || [];
   const badges = p.badges || [];
+  const imgHTML = p.img
+    ? `<div class="pov-img-wrap"><img src="${p.img}" alt="${p.name}" /></div>`
+    : `<div class="pov-img-placeholder"><span>${p.name[0]}</span></div>`;
   right.innerHTML =
+    imgHTML +
     stats.map(s => `<div class="pov-stat-card"><span class="stat-num">${s.num}</span><span class="stat-label">${s.label}</span></div>`).join('') +
     badges.map(b => `<div class="pov-badge"><span>›</span>${b}</div>`).join('');
 
