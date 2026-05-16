@@ -1709,3 +1709,52 @@ footer {
   color: rgba(232,160,32,0.08);
   margin-bottom: 0.5rem;
 }
+
+/* ── FIXES: text clipping, image display ── */
+.prod-tile-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.79rem;
+  line-height: 1.5;
+}
+
+.prod-tile {
+  min-height: 120px;
+}
+
+/* Ensure product overlay images always show */
+.pov-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 1rem;
+  background: var(--navy);
+}
+.pov-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.pov-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--navy3);
+  border: 1px dashed var(--steel-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(232,160,32,0.1);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+/* Remove duplicate about-num CSS if any */
+.about-numbers { display: none; }

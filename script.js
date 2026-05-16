@@ -113,6 +113,24 @@ const PRODUCTS = {
     stats: [{num:"4+", label:"Sub-twin domains"},{num:"C-MAPSS", label:"NASA validated"},{num:"Streamlit", label:"Deployment stack"}],
     badges: ["Physics-informed · Data-driven · Cloud-ready","Unified report engine: DOCX + PDF","Session-namespaced multi-domain architecture"]
   },
+  railtwin: {
+    img: "img_railtwin.jpg",
+    name: "RailTwin",
+    tag: "Rolling Stock · WILD · Railway Digital Twin · IITK × CRIS",
+    desc: "Comprehensive digital twin platform for Indian Railways spanning three interconnected capabilities: (1) a WILD-based CNN classification platform for rolling stock condition assessment using strain-gauge signals; (2) a feedforward neural network for real-time rail-wheel contact force and track irregularity estimation from on-board accelerometers; and (3) a cross-functional digital twinning framework for network-level freight congestion analytics developed with CRIS.",
+    desc2: "The WILD platform, designed at IIT Kanpur and productised by APNA Technologies, is deployed at nearly 20 locations across Indian Railways. The network-level twin integrates IR-GIS, COA, and FOIS data streams for the Waltair Division pilot, identifying the KRDL-KTV section as a critical congestion bottleneck with 210+ sub-20 km/h events per month. Presented at RAIL 26, Budapest.",
+    features: [
+      "WILD strain-gauge signal processing pipeline (Time · FFT · STFT)",
+      "ResNet-18 CNN classification — deployed at 20 IR locations",
+      "On-board force estimation: R² = 0.95 lateral, 0.79 vertical force",
+      "Cross-functional framework: IR-GIS + COA + FOIS data lake",
+      "Waltair Division pilot — KRDL-KTV bottleneck identified",
+      "Animated GIS map · congestion heat maps · dwell-time analytics",
+      "IIT Kanpur × CRIS collaboration · RAIL 26 Budapest 2026"
+    ],
+    stats: [{num:"20+", label:"IR deployment sites (WILD)"},{num:"R²=0.95", label:"Lateral force accuracy"},{num:"RAIL 26", label:"Budapest 2026 paper"}],
+    badges: ["WILD · CNN · ResNet-18 classification","On-board accelerometer force estimation","IR-GIS · COA · FOIS data integration"]
+  },
   rotortwin: {
     img: "img_rotortwin.jpg",
     name: "RotorTwinX",
