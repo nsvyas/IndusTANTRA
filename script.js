@@ -132,7 +132,7 @@ const PRODUCTS = {
   },
   rotortwin: {
     img: "img_rotortwin.jpg",
-    name: "RotorTwinX",
+    name: "Rotor-Bearing-Gearbox Digital Twins",
     tag: "Rotating Machinery Diagnostics · VibLab IIT Kanpur",
     desc: "Digital twin for rotor-bearing fault classification. Raw vibration signals are processed via STFT into time-frequency spectrograms, fed to the VibLab IIT Kanpur CNN v2, and visualised with t-SNE clustering. Detects Healthy, Unbalance, Crack, BPFO, and BPFI conditions.",
     desc2: "Achieves 93–100% accuracy on a 5-class rotor dataset. Multi-architecture support: VibLab CNN v2, ResNetMini, CNN1D-LSTM. Health Index extracted from feature-layer activations and tracked over operational time. Automated DOCX/PDF diagnostic report.",
@@ -162,7 +162,7 @@ const PRODUCTS = {
   },
   rtmon: {
     img: "img_rtmon.jpg",
-    name: "Real-Time Monitoring",
+    name: "Real-Time Production Monitoring",
     tag: "DAQ · Dashboard · HMI · Shopfloor",
     desc: "Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. Deployed and validated at MCF Raebareli, India's most modern coach factory.",
     desc2: "RFID-based material and WIP tracking integrated with an Android HMI for operator-machine geo-location. Cloud VPS relay enables remote access by plant managers anywhere. Historical storage supports utilisation analytics, OEE, and cycle time trending.",
@@ -202,7 +202,7 @@ const PRODUCTS = {
   },
   health: {
     img: "img_health.jpg",
-    name: "Comprehensive Community Health",
+    name: "Community Health Analytics Platform",
     tag: "Social Impact · HealthCamp Analytics · Public Health",
     desc: "AI-powered analytics platform for community health camp data. Ingests biomarker-rich Excel datasets, applies 18+ computed risk scores (cardiovascular, liver, kidney, thyroid, metabolic syndrome, lifestyle), and produces individual patient PDFs alongside population-level community reports.",
     desc2: "Patients with incomplete entries are excluded from community analytics while individual reports are still generated. Dashboard visualisations cover risk distributions, locality-level intelligence, and biomarker heatmaps. Physician-defined reference ranges integrated for clinical accuracy.",
@@ -222,13 +222,20 @@ const PRODUCTS = {
   },
   otit: {
     img: "img_otit.jpg",
-    name: "OT–IT Bridge",
-    tag: "Operational Technology · Information Technology Integration",
-    desc: "Indigenous platform bridging Operational Technology (PLCs, CNCs, embedded systems, RFID, cameras) with Information Technology (enterprise analytics, cloud dashboards, ERP). Secure integration without dependence on proprietary vendor ecosystems.",
-    desc2: "Supports Modbus, OPC-UA, MQTT, RS-232/485, and RFID protocols. Designed for the full range of Indian manufacturing environments — from fully automated CNC lines to semi-manual work centres. Secure data ownership is a core design principle.",
-    features: ["Industrial controllers · embedded systems · HMI","Modbus · OPC-UA · MQTT · RS-232/485 · RFID","Camera and scanner integration","Secure, indigenous data ownership model","Scalable from single machine to full factory","Foundation layer for all IndusTANTRA platforms"],
-    stats: [{num:"5+", label:"Industrial protocols"},{num:"Scalable", label:"Single machine to factory"},{num:"Indigenous", label:"No vendor lock-in"}],
-    badges: ["Modbus · OPC-UA · MQTT · RS-232/485","RFID + camera integration","Foundation for all IndusTANTRA platforms"]
+    name: "Vision-Based Quality Control",
+    tag: "AI Vision · Bore Inspection · Defect Classification · CNN",
+    desc: "Autonomous AI-powered inspection system for internal bore and surface defect detection. A custom-designed robotic probe — carrying multiple miniature cameras — traverses the bore, capturing high-resolution images that are classified in real time by a deep Convolutional Neural Network. Eleven defect classes are identified and localised: Pitting, Copper Deposition, Scratch Marks, Material Deposition, Fume Hole Erosion, Heat Cracks, Cracks, Discolouration, Rifle Lands Damage, Rifle Chattering Marks, and Shell Marks.",
+    desc2: "CNN feature representations are visualised using t-SNE clustering to validate class separability and model confidence. The system generates structured inspection reports with defect images, classification labels, and location data — replacing manual visual inspection with a fully automated, reproducible, and traceable pipeline. Applicable to gun barrels, industrial pipes, cylinders, and any tubular asset requiring internal quality assurance.",
+    features: [
+      "Robotic probe with multi-camera array for full bore coverage",
+      "11-class CNN defect classifier — Pitting, Cracks, Heat Cracks, Copper Deposition & more",
+      "t-SNE visualisation of CNN feature space for class separability analysis",
+      "Real-time defect localisation and image capture during traverse",
+      "Automated structured inspection report with defect images and labels",
+      "Applicable to gun barrels, industrial pipes, cylinders, and tubular assets"
+    ],
+    stats: [{num:"11", label:"Defect classes classified"},{num:"CNN", label:"Deep learning backbone"},{num:"t-SNE", label:"Feature space visualisation"}],
+    badges: ["Robotic multi-camera bore probe","11-class CNN defect detection","Automated inspection report generation"]
   }
 };
 
@@ -262,7 +269,19 @@ function openDetail(key) {
   ov.classList.add('pov-open');
   ov.scrollTop = 0;
   document.body.style.overflow = 'hidden';
+  // Push a history entry so the browser Back button closes the overlay
+  history.pushState({ productOverlay: true }, '', '');
 }
+
+// Handle browser back button — close overlay instead of leaving site
+window.addEventListener('popstate', (e) => {
+  const ov = document.getElementById('product-overlay');
+  if (ov && ov.classList.contains('pov-open')) {
+    ov.classList.remove('pov-open');
+    ov.classList.add('pov-hidden');
+    document.body.style.overflow = '';
+  }
+});
 
 function closeProduct() {
   const ov = document.getElementById('product-overlay');
