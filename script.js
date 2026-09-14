@@ -132,7 +132,7 @@ const PRODUCTS = {
   },
   rotortwin: {
     img: "img_rotortwin.jpg",
-    name: "Rotor-Bearing-Gearbox Digital Twins",
+    name: "RotorTwinX",
     tag: "Rotating Machinery Diagnostics · VibLab IIT Kanpur",
     desc: "Digital twin for rotor-bearing fault classification. Raw vibration signals are processed via STFT into time-frequency spectrograms, fed to the VibLab IIT Kanpur CNN v2, and visualised with t-SNE clustering. Detects Healthy, Unbalance, Crack, BPFO, and BPFI conditions.",
     desc2: "Achieves 93–100% accuracy on a 5-class rotor dataset. Multi-architecture support: VibLab CNN v2, ResNetMini, CNN1D-LSTM. Health Index extracted from feature-layer activations and tracked over operational time. Automated DOCX/PDF diagnostic report.",
@@ -143,12 +143,19 @@ const PRODUCTS = {
   aerotwin: {
     img: "img_aerotwin.jpg",
     name: "AeroEngineTwinX",
-    tag: "Turbofan Engine Prognostics · NASA C-MAPSS",
-    desc: "Physics-informed digital twin for gas turbine engine health management. Thermodynamic cycle reconstruction from partial sensor data yields a component-resolved Health Index — Fan, HPC, HPT, LPT — without requiring run-to-failure labels.",
-    desc2: "Validated across all four NASA C-MAPSS sub-datasets: 87% component diagnosis accuracy on single-fault configurations, strong HI–RUL correlation. Fleet-wide monitoring dashboard with per-engine deep-dive, T-s / P-v diagrams, and automated report generation.",
-    features: ["4-step physics-informed HI pipeline — no RUL labels needed","T-s and P-v thermodynamic cycle reconstruction","87% component diagnosis accuracy (C-MAPSS single-fault)","Fleet monitoring: triage · tracking · automated reports","Stratified confidence levels per component","8-tab interactive dashboard"],
-    stats: [{num:"87%", label:"Component diagnosis accuracy"},{num:"709", label:"Engines validated (C-MAPSS)"},{num:"159,359", label:"Operational cycles"}],
-    badges: ["Fan · HPC · HPT · LPT component resolution","No run-to-failure labels required","8-tab MRO-ready dashboard"]
+    tag: "Turbofan · Gas Turbine · Physics-Informed · NASA C-MAPSS",
+    desc: "AeroEngineTwinX is a deployable, physics-informed digital twin platform for turbofan engine health management and Remaining Useful Life prediction. The platform requires no run-to-failure labels — it works directly on operational sensor data. Sensor groupings and sign conventions follow the gas-path thermodynamics: Fan → LPC → HPC → Combustor → HPT → LPT. Validated across all four NASA C-MAPSS sub-datasets — 709 engines, 159,359 operational cycles.",
+    desc2: "A unique capability is the per-cycle reconstruction of T-s and P-v Brayton cycle diagrams from partial sensor coverage — the enclosed area in the P-v diagram shrinks measurably as HPC degrades, providing a thermodynamic confirmation of the Health Index. The 8-tab Streamlit dashboard covers engine overview, sensor trends, component HI, gas path map, T-s/P-v diagrams, compressor maps, fleet comparison, and one-click automated DOCX/PDF report generation. Air-gapped deployment — no cloud, no OEM vendor dependency.",
+    features: [
+      "Four-stage physics pipeline — normalisation · signed deviation · component HI · RUL",
+      "Signed sensor deviations set by thermodynamic physics, not data fitting — δ ≥ 0 guaranteed",
+      "Separate Health Index per component: Fan · LPC · HPC · Combustor · HPT",
+      "100% HI monotonicity — structural guarantee verified across all 709 C-MAPSS engines",
+      "Brayton cycle T-s / P-v reconstruction per flight cycle from partial sensor data",
+      "8-tab Streamlit dashboard · automated DOCX/PDF reports · air-gapped deployment"
+    ],
+    stats: [{num:"100%", label:"HI monotonicity guarantee"},{num:"709", label:"Engines validated (C-MAPSS)"},{num:"87%", label:"Component diagnosis accuracy"}],
+    badges: ["Fan · LPC · HPC · Combustor · HPT resolved","No run-to-failure labels required","Brayton cycle T-s/P-v reconstruction"]
   },
   powerplant: {
     img: "img_powerplant.jpg",
@@ -162,7 +169,7 @@ const PRODUCTS = {
   },
   rtmon: {
     img: "img_rtmon.jpg",
-    name: "Real-Time Production Monitoring",
+    name: "Real-Time Monitoring",
     tag: "DAQ · Dashboard · HMI · Shopfloor",
     desc: "Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. Deployed and validated at MCF Raebareli, India's most modern coach factory.",
     desc2: "RFID-based material and WIP tracking integrated with an Android HMI for operator-machine geo-location. Cloud VPS relay enables remote access by plant managers anywhere. Historical storage supports utilisation analytics, OEE, and cycle time trending.",
@@ -202,7 +209,7 @@ const PRODUCTS = {
   },
   health: {
     img: "img_health.jpg",
-    name: "Community Health Analytics Platform",
+    name: "Comprehensive Community Health",
     tag: "Social Impact · HealthCamp Analytics · Public Health",
     desc: "AI-powered analytics platform for community health camp data. Ingests biomarker-rich Excel datasets, applies 18+ computed risk scores (cardiovascular, liver, kidney, thyroid, metabolic syndrome, lifestyle), and produces individual patient PDFs alongside population-level community reports.",
     desc2: "Patients with incomplete entries are excluded from community analytics while individual reports are still generated. Dashboard visualisations cover risk distributions, locality-level intelligence, and biomarker heatmaps. Physician-defined reference ranges integrated for clinical accuracy.",
@@ -222,20 +229,13 @@ const PRODUCTS = {
   },
   otit: {
     img: "img_otit.jpg",
-    name: "Vision-Based Quality Control",
-    tag: "AI Vision · Bore Inspection · Defect Classification · CNN",
-    desc: "Autonomous AI-powered inspection system for internal bore and surface defect detection. A custom-designed robotic probe — carrying multiple miniature cameras — traverses the bore, capturing high-resolution images that are classified in real time by a deep Convolutional Neural Network. Eleven defect classes are identified and localised: Pitting, Copper Deposition, Scratch Marks, Material Deposition, Fume Hole Erosion, Heat Cracks, Cracks, Discolouration, Rifle Lands Damage, Rifle Chattering Marks, and Shell Marks.",
-    desc2: "CNN feature representations are visualised using t-SNE clustering to validate class separability and model confidence. The system generates structured inspection reports with defect images, classification labels, and location data — replacing manual visual inspection with a fully automated, reproducible, and traceable pipeline. Applicable to gun barrels, industrial pipes, cylinders, and any tubular asset requiring internal quality assurance.",
-    features: [
-      "Robotic probe with multi-camera array for full bore coverage",
-      "11-class CNN defect classifier — Pitting, Cracks, Heat Cracks, Copper Deposition & more",
-      "t-SNE visualisation of CNN feature space for class separability analysis",
-      "Real-time defect localisation and image capture during traverse",
-      "Automated structured inspection report with defect images and labels",
-      "Applicable to gun barrels, industrial pipes, cylinders, and tubular assets"
-    ],
-    stats: [{num:"11", label:"Defect classes classified"},{num:"CNN", label:"Deep learning backbone"},{num:"t-SNE", label:"Feature space visualisation"}],
-    badges: ["Robotic multi-camera bore probe","11-class CNN defect detection","Automated inspection report generation"]
+    name: "OT–IT Bridge",
+    tag: "Operational Technology · Information Technology Integration",
+    desc: "Indigenous platform bridging Operational Technology (PLCs, CNCs, embedded systems, RFID, cameras) with Information Technology (enterprise analytics, cloud dashboards, ERP). Secure integration without dependence on proprietary vendor ecosystems.",
+    desc2: "Supports Modbus, OPC-UA, MQTT, RS-232/485, and RFID protocols. Designed for the full range of Indian manufacturing environments — from fully automated CNC lines to semi-manual work centres. Secure data ownership is a core design principle.",
+    features: ["Industrial controllers · embedded systems · HMI","Modbus · OPC-UA · MQTT · RS-232/485 · RFID","Camera and scanner integration","Secure, indigenous data ownership model","Scalable from single machine to full factory","Foundation layer for all IndusTANTRA platforms"],
+    stats: [{num:"5+", label:"Industrial protocols"},{num:"Scalable", label:"Single machine to factory"},{num:"Indigenous", label:"No vendor lock-in"}],
+    badges: ["Modbus · OPC-UA · MQTT · RS-232/485","RFID + camera integration","Foundation for all IndusTANTRA platforms"]
   }
 };
 
@@ -269,19 +269,7 @@ function openDetail(key) {
   ov.classList.add('pov-open');
   ov.scrollTop = 0;
   document.body.style.overflow = 'hidden';
-  // Push a history entry so the browser Back button closes the overlay
-  history.pushState({ productOverlay: true }, '', '');
 }
-
-// Handle browser back button — close overlay instead of leaving site
-window.addEventListener('popstate', (e) => {
-  const ov = document.getElementById('product-overlay');
-  if (ov && ov.classList.contains('pov-open')) {
-    ov.classList.remove('pov-open');
-    ov.classList.add('pov-hidden');
-    document.body.style.overflow = '';
-  }
-});
 
 function closeProduct() {
   const ov = document.getElementById('product-overlay');
