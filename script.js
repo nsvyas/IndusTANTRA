@@ -174,6 +174,23 @@ const PRODUCTS = {
     stats: [{num:"9", label:"Coupled subsystem digital twins"},{num:"62", label:"Coupled state variables"},{num:"32", label:"Governing physics ODEs"}],
     badges: ["EASA · FAA · MIL-SPEC traceable","Life-critical ILSS/OBOGS monitoring","Paris Law · Coffin-Manson · Brayton ODE models"]
   },
+  coptergb: {
+    img: "img_copter.jpg",
+    name: "CopterGBTwin",
+    tag: "Helicopter · Drivetrain Health · STFT · ML Fault Classifier",
+    desc: "CopterGBTwin is a fleet-wide helicopter drivetrain health monitoring platform — covering Main Gearbox (MGB), Intermediate Gearbox (IGB), and Tail Gearbox (TGB). Six dedicated vibration sensors per aircraft, processed through FFT and STFT spectral analysis, feed an ML fault classifier trained on labeled wear signatures. The classifier names the specific component and failure mode — not just 'something changed.' A continuously computed Health Index per aircraft drives a 3-tier fleet dashboard: Critical / Flagged / Healthy.",
+    desc2: "Validated on a 4-aircraft fleet (H1–H4) with 3.5 years of continuous sensor logging recorded through to component failure on Aircraft H1. The MGB Output Quill shaft — a swashplate-linked torsional load path — was identified as the degrading component from spectral evidence alone, before failure. The same signatures appeared in H2 (+58% MGB Output Quill RMS, +124% TGB Axial RMS, +30% IGB RMS) years earlier in its service life — demonstrating advance warning capability. Delivered in two phases: Offline batch processing for fleet baselining and root-cause fault library, followed by Online streaming with live dashboard, automated alerts, and predictive maintenance scheduling.",
+    features: [
+      "Six vibration sensors per aircraft — MGB · IGB · TGB — processed every flight across the full fleet",
+      "FFT + STFT spectral analysis — noise floor rise and spectral line broadening detected automatically",
+      "ML fault classifier trained on labeled signatures — names the component and failure mode",
+      "Archard tribological wear model → gearbox Health Index computed per aircraft per flight",
+      "3-tier fleet Health Index dashboard — Critical · Flagged · Healthy — per aircraft",
+      "Offline batch (Phase 1) → Online streaming with live alerts and predictive scheduling (Phase 2)"
+    ],
+    stats: [{num:"3.5 yrs", label:"Fleet logging, H1 to failure"},{num:"4", label:"Aircraft fleet validated"},{num:"+124%", label:"TGB Axial RMS detected in H2"}],
+    badges: ["MGB · IGB · TGB component resolution","FFT · STFT · ML classifier pipeline","Offline batch → Online streaming"]
+  },
   powerplant: {
     img: "img_powerplant.jpg",
     name: "PowerPlantTwin",
