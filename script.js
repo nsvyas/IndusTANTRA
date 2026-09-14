@@ -166,12 +166,19 @@ const PRODUCTS = {
   },
   rotortwin: {
     img: "img_rotortwin.jpg",
-    name: "RotorTwinX",
-    tag: "Rotating Machinery Diagnostics · VibLab IIT Kanpur",
-    desc: "Digital twin for rotor-bearing fault classification. Raw vibration signals are processed via STFT into time-frequency spectrograms, fed to the VibLab IIT Kanpur CNN v2, and visualised with t-SNE clustering. Detects Healthy, Unbalance, Crack, BPFO, and BPFI conditions.",
-    desc2: "Achieves 93–100% accuracy on a 5-class rotor dataset. Multi-architecture support: VibLab CNN v2, ResNetMini, CNN1D-LSTM. Health Index extracted from feature-layer activations and tracked over operational time. Automated DOCX/PDF diagnostic report.",
-    features: ["STFT spectrogram pipeline (raw signal → image → CNN)","VibLab IITK CNN v2 · ResNetMini · CNN1D-LSTM","t-SNE dimensionality reduction visualisation","BPFO / BPFI bearing fault frequency tracking","93–100% accuracy on 5-class dataset","Automated DOCX/PDF diagnostic report"],
-    stats: [{num:"93–100%", label:"Fault detection accuracy"},{num:"5-class", label:"Rotor fault dataset"},{num:"CNN v2", label:"VibLab IITK architecture"}],
+    name: "Rotor-Bearing-Gearbox Digital Twins",
+    tag: "Rotating Machinery · VibLab IIT Kanpur · CNN · STFT",
+    desc: "Physics-informed digital twin for rotor-bearing-gearbox fault diagnosis and Health Index tracking. Raw vibration signals from rotating machinery are converted to STFT spectrograms — turning a 1D signal into a 2D time-frequency image — and classified by the VibLab IIT Kanpur CNN v2. Five fault classes resolved: Healthy, Unbalance, Crack, Outer Race (BPFO), and Inner Race (BPFI) bearing defects. Achieves 93–100% classification accuracy on a 5-class rotor dataset.",
+    desc2: "t-SNE dimensionality reduction visualises the CNN feature space — confirming class separability and classifier confidence before deployment. Bearing fault frequencies (BPFO, BPFI, BSF) are tracked continuously and cross-referenced against physics-predicted defect frequencies. A monotonically computed Health Index is extracted from feature-layer activations and trended over operational life. Multi-architecture support — VibLab CNN v2, ResNetMini, CNN1D-LSTM — allows selection by inference speed or accuracy requirement. Automated DOCX/PDF diagnostic report generated per analysis run.",
+    features: [
+      "STFT spectrogram pipeline — raw vibration signal → 2D time-frequency image → CNN",
+      "VibLab IITK CNN v2 · ResNetMini · CNN1D-LSTM — five selectable architectures",
+      "Five fault classes: Healthy · Unbalance · Crack · BPFO · BPFI",
+      "BPFO / BPFI bearing defect frequency tracking against physics predictions",
+      "t-SNE feature-space visualisation — class separability confirmed before deployment",
+      "Health Index trending over operational life · automated DOCX/PDF diagnostic report"
+    ],
+    stats: [{num:"93–100%", label:"Fault classification accuracy"},{num:"5-class", label:"Rotor fault dataset"},{num:"CNN v2", label:"VibLab IITK architecture"}],
     badges: ["HC · UB · CR · BPFO · BPFI fault classes","STFT spectrogram pipeline","t-SNE cluster visualisation"]
   },
   aerotwin: {
@@ -228,40 +235,68 @@ const PRODUCTS = {
   powerplant: {
     img: "img_powerplant.jpg",
     name: "PowerPlantTwin",
-    tag: "Power Generation Asset Monitoring",
-    desc: "Condition monitoring digital twin for power generation assets — turbines, generators, auxiliary machinery. Translates legacy LabVIEW PoP Monitor acquisitions into a Python-based analytics pipeline with FFT spectral analysis and Health Index tracking.",
-    desc2: "Shares the vibration processing engine with RotorTwinX, with domain-specific presets for shaft speeds and bearing frequencies. Harmonic identification (1×, 2× and fault lines), anomaly detection, and HI trending over operational life.",
-    features: ["LabVIEW PoP Monitor → Python migration pathway","FFT spectral analysis · harmonic identification","1× 2× shaft-speed and fault-frequency tracking","Health Index trending over operational life","Shared RotorTwinX vibration engine","Anomaly detection with configurable thresholds"],
-    stats: [{num:"FFT", label:"Spectral analysis engine"},{num:"LabVIEW", label:"Legacy migration source"},{num:"HI", label:"Health Index tracking"}],
-    badges: ["1× · 2× harmonic identification","Fault-frequency bearing diagnostics","Shared RotorTwinX vibration engine"]
+    tag: "Power Generation · Condition Monitoring · FFT · Health Index",
+    desc: "Condition monitoring digital twin for power generation assets — turbines, generators, and auxiliary machinery. Translates legacy LabVIEW PoP Monitor data acquisitions into an open-source Python analytics pipeline with FFT spectral analysis, harmonic identification, and Health Index trending. Shares the same validated vibration processing engine as Rotor-Bearing-Gearbox Digital Twins, with domain-specific presets calibrated for power plant shaft speeds and bearing fault frequencies.",
+    desc2: "Shaft-speed harmonics (1× and 2×) and bearing fault frequencies (BPFO, BPFI, BSF) are identified and tracked from vibration data. A monotonically computed Health Index trends over operational life — detecting early anomalies before threshold alarms trigger. The migration pathway from LabVIEW to Python eliminates proprietary vendor dependency. Configurable alarm thresholds per machine type. DST-funded origins: joint project with NTPC, BHEL, and CSIO Chandigarh (1996–2001), forming the validated foundation for this platform.",
+    features: [
+      "LabVIEW PoP Monitor → open-source Python migration — no vendor lock-in",
+      "FFT spectral analysis — shaft-speed harmonics 1× · 2× and bearing fault frequencies",
+      "BPFO · BPFI · BSF bearing defect frequency identification and tracking",
+      "Monotonic Health Index trending — early anomaly detection before threshold alarms",
+      "Shared VibLab IITK vibration processing engine with domain-specific power plant presets",
+      "DST-funded validation: NTPC · BHEL · CSIO Chandigarh (1996–2001)"
+    ],
+    stats: [{num:"FFT", label:"Spectral analysis engine"},{num:"1× · 2×", label:"Harmonic tracking"},{num:"HI", label:"Health Index trending"}],
+    badges: ["BPFO · BPFI · BSF bearing diagnostics","LabVIEW → Python migration","NTPC · BHEL · DST validated origins"]
   },
   rtmon: {
     img: "img_rtmon.jpg",
-    name: "Real-Time Monitoring",
-    tag: "DAQ · Dashboard · HMI · Shopfloor",
-    desc: "Shopfloor data acquisition from heterogeneous machines — CNC, welding robots, manual work centres — homogenised and visualised in a live web dashboard. Deployed and validated at MCF Raebareli, India's most modern coach factory.",
-    desc2: "RFID-based material and WIP tracking integrated with an Android HMI for operator-machine geo-location. Cloud VPS relay enables remote access by plant managers anywhere. Historical storage supports utilisation analytics, OEE, and cycle time trending.",
-    features: ["Multi-machine DAQ homogenisation (CNC, robot, manual)","RFID WIP tracking · Android HMI geo-location","Live web dashboard with configurable views","Utilisation · cycle time · OEE analytics","Cloud VPS relay for remote monitoring","Historical data storage and retrieval"],
-    stats: [{num:"MCF", label:"Raebareli deployment"},{num:"RFID", label:"Material tracking"},{num:"VPS", label:"Cloud relay"}],
+    name: "Real-Time Production Monitoring",
+    tag: "Shopfloor DAQ · Live Dashboard · RFID · MCF Raebareli",
+    desc: "Real-time shopfloor intelligence platform for heterogeneous manufacturing environments — CNC machines, welding robots, and manual work centres. Data from all machine types is homogenised into a unified acquisition layer and visualised on a live web dashboard. Deployed and validated at Modern Coach Factory (MCF) Raebareli, India's most advanced rail coach manufacturing facility, under the Technology Mission for Indian Railways.",
+    desc2: "RFID-based material and WIP (Work-in-Progress) tracking is integrated with an Android HMI for operator-machine geo-location — knowing where every component and operator is on the shopfloor at any moment. A cloud VPS relay enables plant managers to monitor production from anywhere. Historical data storage supports utilisation analytics, Overall Equipment Effectiveness (OEE), and cycle time trending. Foundation layer for the Process Scheduling digital twin.",
+    features: [
+      "Multi-machine DAQ homogenisation — CNC · welding robot · manual work centre",
+      "Live web dashboard with configurable machine-status and production views",
+      "RFID WIP tracking — component location and status across the shopfloor",
+      "Android HMI geo-location — operator-machine assignment in real time",
+      "Cloud VPS relay — remote plant monitoring by managers anywhere",
+      "OEE · utilisation · cycle time analytics from historical data store"
+    ],
+    stats: [{num:"MCF", label:"Raebareli deployment"},{num:"RFID", label:"WIP material tracking"},{num:"OEE", label:"Live utilisation analytics"}],
     badges: ["CNC · Robot · Manual machine DAQ","Android HMI geo-location","Live OEE and utilisation analytics"]
   },
   sched: {
     img: "img_sched.jpg",
     name: "Process Scheduling",
-    tag: "Shopfloor Digital Twin · SimPy Discrete-Event",
-    desc: "Discrete-event simulation of the production shopfloor — each machine and component modelled as a Python/SimPy object. Automated schedule generation, scenario analysis, and bottleneck identification under any order mix and priority.",
-    desc2: "Deployed at MCF Raebareli Shell Shop. Priority-based dispatching reduced lead time for highest-priority coach variants by up to 10 days vs random dispatching. Bottleneck analysis identified primary constraint stations at ~86–88% utilisation.",
-    features: ["SimPy discrete-event simulation at 1-minute resolution","Each machine and component modelled as Python objects","Priority-based job dispatching rules","Gantt chart + machine loading chart generation","Bottleneck identification (utilisation analytics)","ERP integration flexibility"],
-    stats: [{num:"10 days", label:"Lead time reduction (MCF)"},{num:"1 min", label:"Simulation resolution"},{num:"86–88%", label:"Bottleneck utilisation"}],
+    tag: "Shopfloor Digital Twin · SimPy Discrete-Event · MCF Raebareli",
+    desc: "Full shopfloor digital twin using discrete-event simulation — every machine, workstation, and component modelled as a Python/SimPy object at 1-minute resolution. Automated schedule generation, bottleneck identification, Gantt chart output, and machine loading charts under any job-order mix and dispatching priority. Deployed and validated at Modern Coach Factory (MCF), Raebareli, under the Technology Mission for Indian Railways.",
+    desc2: "Priority-based dispatching reduced lead time for highest-priority coach variants by up to 10 days compared to random dispatching — a directly measurable improvement in delivery performance. Bottleneck analysis identified the Shell Shop as the primary constraint station at 86–88% utilisation, enabling targeted investment decisions. Scenario analysis allows planners to test any order mix or dispatching rule before committing to a schedule. ERP integration pathway built in.",
+    features: [
+      "Full shopfloor DES — every machine and workstation as a Python/SimPy object",
+      "1-minute simulation resolution — captures real production dynamics",
+      "Priority-based · FIFO · SPT · custom dispatching rules — scenario comparison",
+      "Gantt chart + machine loading chart auto-generated per schedule run",
+      "Bottleneck identification — utilisation analytics per station",
+      "ERP integration pathway · deployed at MCF Raebareli Shell Shop"
+    ],
+    stats: [{num:"10 days", label:"Lead time reduction (MCF)"},{num:"1 min", label:"Simulation resolution"},{num:"86–88%", label:"Bottleneck utilisation identified"}],
     badges: ["SimPy discrete-event engine","Priority-based job dispatching","Gantt + machine loading charts"]
   },
   smartcity: {
     img: "img_smartcity.jpg",
     name: "Smart City Digital Twin",
-    tag: "Urban Systems · Traffic · IoT · Event Management",
-    desc: "City-scale digital twin for traffic, mobility, and urban infrastructure management. Built on OSMnx for geospatial road network extraction, with synthetic congestion modelling and animated visualisation. Designed for event scenario planning and command-centre dashboards.",
-    desc2: "Congestion zones are dynamically colour-coded (green → red) across the road network in sequential time steps. Framework is IoT-ready: once ANPR cameras, GPS buses, or sensor feeds are available, live data replaces the synthetic model — same codebase, different source. Scalable to sanitation logistics, emergency response, and public transport optimisation.",
-    features: ["OSMnx road network extraction from OpenStreetMap","Animated congestion visualisation (green → red)","Event scenario modelling with zone multipliers","Streamlit browser dashboard — no proprietary software","IoT / ANPR / GPS integration pathway","CSV export per simulated frame"],
+    tag: "Urban Systems · Traffic · Event Management · IoT-Ready",
+    desc: "City-scale digital twin for traffic, mobility, and urban infrastructure management — built for the challenge of large-scale public events where footfalls in millions stress every system simultaneously. OSMnx extracts the full road network from OpenStreetMap. Zone-specific congestion multipliers model the impact of religious gatherings, political rallies, and sporting events. Animated Plotly visualisation shows congestion evolving across the road network in sequential time steps — green to red — enabling anticipatory management before gridlock occurs.",
+    desc2: "The platform is IoT-ready by design: once ANPR cameras, GPS buses, or sensor feeds are connected, live data replaces the synthetic model with the same codebase and dashboard — no rebuild required. Streamlit browser-based dashboard requires no proprietary GIS software. Scalable beyond traffic to sanitation logistics, emergency response routing, and public transport optimisation. Applicable to any Indian city expecting large-scale event footfalls — Prayagraj, Varanasi, stadium cities, election rally venues.",
+    features: [
+      "OSMnx road network extraction from OpenStreetMap — full city-scale graph",
+      "Zone-specific congestion multiplier modelling for large public events",
+      "Animated Plotly congestion visualisation — green → red across road network",
+      "Streamlit browser dashboard — no proprietary GIS or mapping software",
+      "IoT / ANPR / GPS integration pathway — same codebase, live data replaces synthetic",
+      "Scalable to sanitation · emergency response · public transport optimisation"
+    ],
     stats: [{num:"OSMnx", label:"Road network extraction"},{num:"IoT-ready", label:"ANPR/GPS integration path"},{num:"Plotly", label:"Animated visualisation"}],
     badges: ["Colour-coded congestion mapping","Event scenario zone multipliers","Streamlit dashboard — no proprietary tools"]
   },
@@ -277,13 +312,20 @@ const PRODUCTS = {
   },
   health: {
     img: "img_health.jpg",
-    name: "Comprehensive Community Health",
-    tag: "Social Impact · HealthCamp Analytics · Public Health",
-    desc: "AI-powered analytics platform for community health camp data. Ingests biomarker-rich Excel datasets, applies 18+ computed risk scores (cardiovascular, liver, kidney, thyroid, metabolic syndrome, lifestyle), and produces individual patient PDFs alongside population-level community reports.",
-    desc2: "Patients with incomplete entries are excluded from community analytics while individual reports are still generated. Dashboard visualisations cover risk distributions, locality-level intelligence, and biomarker heatmaps. Physician-defined reference ranges integrated for clinical accuracy.",
-    features: ["18+ biomarker computed risk scores","Individual patient PDF + community population report","Locality-level analytics and risk stratification","Physician-defined reference range integration","Incomplete-entry exclusion from community analytics","Streamlit web dashboard · no proprietary software"],
-    stats: [{num:"18+", label:"Computed biomarker scores"},{num:"PDF", label:"Individual + population reports"},{num:"Locality", label:"Level risk intelligence"}],
-    badges: ["Cardiovascular · Liver · Kidney · Thyroid risk","Physician reference range integration","Incomplete-entry safe exclusion"]
+    name: "Community Health Analytics Platform",
+    tag: "Social Impact · Health Camp Analytics · Population Health · Doctors Consortium",
+    desc: "The same digital twinning philosophy that monitors industrial assets is applied to community health — creating a living analytical twin of population health from organised health camp data. In collaboration with a consortium of medical doctors, the platform ingests biomarker-rich datasets and applies 18+ computed risk scores covering cardiovascular, liver, kidney, thyroid, metabolic syndrome, and lifestyle risk domains. Each patient record generates an individual health twin with a personalised PDF report for physician use.",
+    desc2: "Community-level aggregation identifies locality-specific disease prevalence, risk clustering, and high-priority intervention zones — enabling targeted public health planning by municipal and state health bodies. Physician-defined reference ranges are integrated for clinical accuracy. Patients with incomplete entries are safely excluded from community analytics while their individual reports are still generated. Streamlit web dashboard with risk distribution visualisations, locality-level intelligence, and biomarker heatmaps. No proprietary software required.",
+    features: [
+      "18+ biomarker computed risk scores — cardiovascular · liver · kidney · thyroid · metabolic",
+      "Individual patient health twin — personalised PDF report per patient for physician use",
+      "Population-level analytics — locality risk clustering and high-priority intervention zones",
+      "Doctors consortium collaboration — physician-defined reference ranges integrated",
+      "Safe incomplete-entry exclusion — individual reports generated regardless",
+      "Streamlit web dashboard — risk distributions · biomarker heatmaps · locality intelligence"
+    ],
+    stats: [{num:"18+", label:"Computed biomarker risk scores"},{num:"PDF", label:"Individual + population reports"},{num:"Locality", label:"Level risk stratification"}],
+    badges: ["Cardiovascular · Liver · Kidney · Thyroid risk","Doctors consortium collaboration","Population-level locality risk mapping"]
   },
   draide: {
     img: "img_draide.jpg",
