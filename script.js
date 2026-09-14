@@ -157,6 +157,23 @@ const PRODUCTS = {
     stats: [{num:"100%", label:"HI monotonicity guarantee"},{num:"709", label:"Engines validated (C-MAPSS)"},{num:"87%", label:"Component diagnosis accuracy"}],
     badges: ["Fan · LPC · HPC · Combustor · HPT resolved","No run-to-failure labels required","Brayton cycle T-s/P-v reconstruction"]
   },
+  aerophm: {
+    img: "img_aerotwin.jpg",
+    name: "AeroPHM-DT",
+    tag: "Full-Aircraft IVHM · 9 Subsystems · Physics ODE · Safety-Critical",
+    desc: "AeroPHM-DT is a full-aircraft Integrated Vehicle Health Management (IVHM) platform — nine coupled subsystem digital twins, each governed by real physics ODEs with named material constants. Subsystems covered: Fuel, Hydraulic, ILSS/OBOGS (life-critical), ECS, SPS, Undercarriage BMS, Structures (fracture mechanics), Structures (modal vibration), and Fire. Every Health Index value is traceable from sensor → signed deviation → subsystem HI → system HI → maintenance action. Certification-grade explainability: EASA, FAA, and MIL-SPEC demand causal traceability — statistical correlation alone is insufficient.",
+    desc2: "The safety-weighted system Health Index assigns weights by consequence of failure, not sensor count — ILSS/OBOGS carries the highest weight (16%) because OBOGS failure has caused Class A mishaps. A 3-tier alert system (Caution / Warning / Critical) drives maintenance decisions. Physics ODE predictions track real sensor data within 4% tolerance across 16 validation figures — hydraulic pressure, ECS bleed, structural strain, and wing accelerometer data. Delivered as complete Python source, 9-tab Streamlit dashboard, 32-equation physics documentation, and automated DOCX/PDF reports. Air-gapped — any laptop, no cloud.",
+    features: [
+      "Nine coupled subsystem DTs — Fuel · Hydraulic · ILSS/OBOGS · ECS · SPS · U/C BMS · Structures · Vibration · Fire",
+      "62 coupled state variables · 32 governing physics ODEs · 13 cross-subsystem couplings",
+      "Safety-weighted system HI — weights by consequence of failure, not sensor count",
+      "ILSS/OBOGS life-critical monitoring — crew O₂ alert on ECS bleed pressure drop",
+      "Structural RUL from Paris–Erdogan fracture mechanics — crack propagation forecast with MSG-3 intervals",
+      "3-tier alert system · 9-tab Streamlit dashboard · automated DOCX/PDF · air-gapped deployment"
+    ],
+    stats: [{num:"9", label:"Coupled subsystem digital twins"},{num:"62", label:"Coupled state variables"},{num:"32", label:"Governing physics ODEs"}],
+    badges: ["EASA · FAA · MIL-SPEC traceable","Life-critical ILSS/OBOGS monitoring","Paris Law · Coffin-Manson · Brayton ODE models"]
+  },
   powerplant: {
     img: "img_powerplant.jpg",
     name: "PowerPlantTwin",
