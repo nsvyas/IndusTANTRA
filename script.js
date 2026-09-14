@@ -158,7 +158,7 @@ const PRODUCTS = {
     badges: ["Fan · LPC · HPC · Combustor · HPT resolved","No run-to-failure labels required","Brayton cycle T-s/P-v reconstruction"]
   },
   aerophm: {
-    img: "img_aerotwin.jpg",
+    img: "img_aerophm.jpg",
     name: "AeroPHM-DT",
     tag: "Full-Aircraft IVHM · 9 Subsystems · Physics ODE · Safety-Critical",
     desc: "AeroPHM-DT is a full-aircraft Integrated Vehicle Health Management (IVHM) platform — nine coupled subsystem digital twins, each governed by real physics ODEs with named material constants. Subsystems covered: Fuel, Hydraulic, ILSS/OBOGS (life-critical), ECS, SPS, Undercarriage BMS, Structures (fracture mechanics), Structures (modal vibration), and Fire. Every Health Index value is traceable from sensor → signed deviation → subsystem HI → system HI → maintenance action. Certification-grade explainability: EASA, FAA, and MIL-SPEC demand causal traceability — statistical correlation alone is insufficient.",
