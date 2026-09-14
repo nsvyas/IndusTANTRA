@@ -113,22 +113,56 @@ const PRODUCTS = {
     stats: [{num:"4+", label:"Sub-twin domains"},{num:"C-MAPSS", label:"NASA validated"},{num:"Streamlit", label:"Deployment stack"}],
     badges: ["Physics-informed · Data-driven · Cloud-ready","Unified report engine: DOCX + PDF","Session-namespaced multi-domain architecture"]
   },
-  railtwin: {
+  railtwinx: {
     img: "img_railtwin.jpg",
-    name: "RailTwin",
-    tag: "Rolling Stock · WILD · Railway Digital Twin · IITK × CRIS",
-    desc: "Comprehensive digital twin platform for Indian Railways spanning three interconnected capabilities: (1) a WILD-based CNN classification platform for rolling stock condition assessment using strain-gauge signals; (2) a feedforward neural network for real-time rail-wheel contact force and track irregularity estimation from on-board accelerometers; and (3) a cross-functional digital twinning framework for network-level freight congestion analytics developed with CRIS.",
-    desc2: "The WILD platform, designed at IIT Kanpur and productised by APNA Technologies, is deployed at nearly 20 locations across Indian Railways. The network-level twin integrates IR-GIS, COA, and FOIS data streams for the Waltair Division pilot, identifying the KRDL-KTV section as a critical congestion bottleneck with 210+ sub-20 km/h events per month. Presented at RAIL 26, Budapest.",
+    name: "RailTwinX",
+    tag: "Wayside Intelligence · 21-Class Fault · CNN · EN Standards",
+    desc: "RailTwinX is a physics-informed wayside intelligence platform that delivers explainable rolling stock and track fault diagnosis from a single trackside sensor array — no onboard instrumentation required. Sixteen wayside channels across five sensor groups (strain, accelerometer, acoustic, context, speed) feed an STFT-based CNN pipeline. Physics-synthetic training generates correct STFT signatures for all 21 fault classes from closed-form models — Hertz contact, Winkler beam, Archard wear, Klingel's hunting formula — without requiring labelled field recordings from the target installation.",
+    desc2: "Two complementary Health Indices — Train Health Index (THI) for rolling stock and Track Health Index (TkHI) for track structure — are computed from the same wayside sensors per train passage. Comparing THI against TkHI isolates whether an anomaly originates in the vehicle or the track without any onboard sensor. Four EN-aligned action zones (Normal / Alert / Intervention / Withdrawal) drive maintenance decisions. Grad-CAM attribution maps provide a visual physics explanation per classification — regulators and rail engineers are never handed a black-box verdict. Validated at 96.4% weighted F1 on Indian Railways LHB coach data. Presented as an Invited Lecture at Railways 2026 · STECH 2026, Budapest.",
     features: [
-      "Wayside Wheel Impact Load Monitoring - WILD",
-      "Deployed at 20 IR locations: ResNet-18 CNN classification",
-      "On-board Rolling Stock Condition Monitoring Platform",
-      "CRIS collaboration: Cross-functional framework: IR-GIS + COA + FOIS data lake",
-      "Waltair Division pilot — KRDL-KTV bottleneck identified",
-      "Animated GIS map · congestion heat maps · dwell-time analytics"
+      "16 wayside channels · 5 sensor groups — strain · accelerometer · acoustic · context · speed",
+      "21-class fault taxonomy — wheel tread · profile · bogie · bearing · track structural faults",
+      "Physics-synthetic CNN training — no labelled field data required at target installation",
+      "THI (rolling stock) + TkHI (track) from one sensor array — isolates vehicle vs. track root cause",
+      "Grad-CAM explainability — physics-tied attribution per classification, per passage",
+      "EN 50126 RAMS · EN 50128 software safety · EN 13231 · EN 15313 encoded in architecture"
     ],
-    stats: [{num:"20+", label:"IR deployment sites (WILD)"},{num:"R²=0.95", label:"Lateral force accuracy"},{num:"RAIL 26", label:"Budapest 2026 paper"}],
-    badges: ["WILD · CNN · ResNet-18 classification","On-board accelerometer force estimation","IR-GIS · COA · FOIS data integration"]
+    stats: [{num:"96.4%", label:"Weighted F1"},{num:"21", label:"Fault classes"},{num:"46", label:"Physics equations"}],
+    badges: ["THI · TkHI dual health indices","Grad-CAM XAI per passage","EN 50126 · EN 50128 · EN 15313"]
+  },
+  trackpulse: {
+    img: "img_trackpulse.jpg",
+    name: "TrackPulse",
+    tag: "Wayside · Plug-In Intelligence · Sensor-Agnostic · 25+ Sites",
+    desc: "TrackPulse is a pre-built, sensor-agnostic intelligence layer that installs above any existing trackside sensing infrastructure — WILD strain gauges, Distributed Acoustic Sensing (DAS), fibre-optic arrays, rail accelerometers — and immediately delivers full-spectrum rolling stock diagnostics. No changes to hardware, firmware, or sensing infrastructure. ResNet-18 CNN pre-trained and validated on LHB coach fault data, ready for fine-tuning on new rolling stock types within days.",
+    desc2: "A scalar Train Health Index (THI) is generated on every train passage and tracked longitudinally per rake — building a continuous degradation record across days, weeks, and months. Grad-CAM attribution maps show exactly which signal regions triggered each diagnostic decision. The alternative — building an equivalent ML pipeline from scratch — requires 2–3 years and USD 500K–1.5M. TrackPulse compresses that to immediate deployment. Validated across 25+ wayside sites. Twelve diagnosable rolling stock fault classes covering wheel, suspension, axle, loading, and bearing conditions.",
+    features: [
+      "Plug-in above any existing wayside system — WILD · DAS · fibre-optic · accelerometer",
+      "No new hardware, no firmware changes — zero disruption to existing infrastructure",
+      "12-class rolling stock fault taxonomy — wheel · suspension · axle · loading · bearing",
+      "Live Train Health Index (THI) per passage — longitudinal rake tracking over time",
+      "Grad-CAM XAI — operator-visible signal attribution per diagnostic decision",
+      "25+ wayside sites validated · ResNet-18 backbone · fine-tunable per rolling stock type"
+    ],
+    stats: [{num:"25+", label:"Wayside sites validated"},{num:"12", label:"Fault classes"},{num:"Day 1", label:"Deployment ready"}],
+    badges: ["Sensor-agnostic plug-in layer","WILD · DAS · fibre-optic compatible","Grad-CAM XAI per passage"]
+  },
+  bogiepulse: {
+    img: "img_bogiepulse.jpg",
+    name: "BogiePulse",
+    tag: "Onboard · OEM · White-Label · Fleet-Agnostic · European Market",
+    desc: "BogiePulse is a pre-built, fleet-agnostic, physics-informed onboard Condition-Based Maintenance intelligence engine designed for rolling stock OEMs. It embeds into any vehicle platform and delivers continuous structural health monitoring, six-class fault diagnosis, and a Vehicle Health Index (0–100) from Day One of service. Physics-informed synthetic data generation means a new vehicle type — new bogie geometry, wheel diameter, suspension configuration — is ready for deployment in weeks, not the 12–18 months required by field-data-dependent alternatives.",
+    desc2: "A hierarchical 28-channel sensor architecture — axle-box piezo accelerometers at 20 kHz, bogie frame MEMS at 1 kHz, carbody accelerometers at 200 Hz, and brake disc IR pyrometers — covers the full structural dynamic bandwidth. A dual-head CNN simultaneously classifies fault type (CrossEntropy) and regresses continuous severity (MSE). Five selectable architectures from a 52K-parameter edge Lite to a 1.8M BiLSTM. VHI prognosis date is calculable from slope — enabling CBM-scheduled inspection before failure, not emergency withdrawal. White-label configurable per OEM: vehicle type, speed corridor, fault class set, and output to depot server, fleet management cloud, or ERA TAF TSI data streams.",
+    features: [
+      "Fleet-agnostic — any bogie, any vehicle type, any OEM — white-label configurable",
+      "Physics-informed synthetic training — new vehicle type ready in weeks, no field data required",
+      "28-channel hierarchical sensor fusion — axle-box 20 kHz → carbody 200 Hz",
+      "Dual-head CNN — simultaneous fault classification + continuous severity regression",
+      "Vehicle Health Index (0–100) — prognosis date calculable from VHI degradation slope",
+      "Five selectable CNN architectures — 52K edge Lite to 1.8M BiLSTM"
+    ],
+    stats: [{num:"28", label:"Sensor channels"},{num:"VHI 0–100", label:"Vehicle Health Index"},{num:"Weeks", label:"New vehicle type ready"}],
+    badges: ["Fleet-agnostic · white-label OEM","Physics-synthetic — zero field data","EN 50126 · ERA TAF TSI"]
   },
   rotortwin: {
     img: "img_rotortwin.jpg",
@@ -179,7 +213,7 @@ const PRODUCTS = {
     name: "CopterGBTwin",
     tag: "Helicopter · Drivetrain Health · STFT · ML Fault Classifier",
     desc: "CopterGBTwin is a fleet-wide helicopter drivetrain health monitoring platform — covering Main Gearbox (MGB), Intermediate Gearbox (IGB), and Tail Gearbox (TGB). Six dedicated vibration sensors per aircraft, processed through FFT and STFT spectral analysis, feed an ML fault classifier trained on labeled wear signatures. The classifier names the specific component and failure mode — not just 'something changed.' A continuously computed Health Index per aircraft drives a 3-tier fleet dashboard: Critical / Flagged / Healthy.",
-    desc2: "Validated for component failure. Illustration - the MGB Output Quill shaft — a swashplate-linked torsional load path — identified as the degrading component from spectral evidence. Presently, offline batch processing for fleet baselining and root-cause fault library.",
+    desc2: "Validated on a 4-aircraft fleet (H1–H4) with 3.5 years of continuous sensor logging recorded through to component failure on Aircraft H1. The MGB Output Quill shaft — a swashplate-linked torsional load path — was identified as the degrading component from spectral evidence alone, before failure. The same signatures appeared in H2 (+58% MGB Output Quill RMS, +124% TGB Axial RMS, +30% IGB RMS) years earlier in its service life — demonstrating advance warning capability. Delivered in two phases: Offline batch processing for fleet baselining and root-cause fault library, followed by Online streaming with live dashboard, automated alerts, and predictive maintenance scheduling.",
     features: [
       "Six vibration sensors per aircraft — MGB · IGB · TGB — processed every flight across the full fleet",
       "FFT + STFT spectral analysis — noise floor rise and spectral line broadening detected automatically",
